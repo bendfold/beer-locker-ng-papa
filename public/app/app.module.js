@@ -1,7 +1,7 @@
 (function(){
 	'use strict';
 	
-	angular.module('locker-app',[
+	angular.module('app',[
 		/*
 		 * Everybody has access to these.
 		 * We could place these under every feature area,
@@ -11,7 +11,7 @@
 		/*
 		 * Feature areas
 		 */
-		'papa.test.main'
+		'app.beerlisting'
 	]);
 
 })();

@@ -1,19 +1,68 @@
 <!doctype html>
-<html class='no-js' lang='' data-ng-app='locker-app'>
+<html class='no-js' lang='' data-ng-app='app'>
 	<head>
 		<meta charset='utf-8'>
 		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
 		<title>Papa-locker</title>
 		<meta name='description' content=''>
 		<meta name='viewport' content='width=device-width, initial-scale=1'>
-
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="./content/css/bootstrap.min.css">
 		<link rel='stylesheet' href='./content/css/main.css'>
-	
 	</head>
 	<body>
 		
+		<!-- 
 		<div class="test" data-ng-controller='MainCtrl' >
 			<h1> {{msg}} </h1>
+		</div>
+		-->
+
+		<div class="wrapper">
+			<header>
+				<div class="title">
+					<h1>Beer locker</h1>
+				</div>
+				<div class="filter">
+					<!-- TODO - Beer filter goes here -->
+				</div>
+			</header>
+			<div class="main-content">
+				<!-- <ul class="product-list">
+					<li class="col-md-3 col-sm-6" data-ng-repeat="beer in beers | filter:query | orderBy:orderProp">
+						<ul class="beer-tile">
+							<li ng-if="beer.name">
+								<p>Beer name: <a href="">{{beer.name}}</a></p>
+							</li>
+							<li ng-if="beer.type">
+								<p>Beer type: <a href="">{{beer.type}}</a></p>
+							</li>
+							<li ng-if="beer.quantity">
+								<p>Currently in stock: {{beer.quantity}}</p>
+							</li>
+							<li ng-if="beer.abv">
+								<p>ABV: {{beer.abv}}%</p>
+							</li> 
+							<li ng-if="beer.origin">
+								<p>Country of origin: {{beer.origin}}</p>
+							</li>
+							<li ng-if="beer.details">
+								<p>Beer details: {{beer.details}}</p>
+							</li>
+							<li class="edit-beer">
+								<p>
+									<a href="#edit">EDIT</a>
+								</p>
+							</li>
+							<li class="delete-beer">
+								<p>
+									<a href="#delete" ng-click="deleteBeer( beer._id )">DELETE</a>
+								</p>
+							</li>
+						</ul>
+					</li>
+				</ul> -->
+			</div>
 		</div>
 		
 		<!--  ***** VENDOR SCRIPTS  ***** -->
@@ -25,8 +74,25 @@
 		<script src='./app/app.module.js'></script>
 		<!-- Core module -->
 		<script src="./app/core/core.module.js"></script>
+		<script src="./app/core/dataservice.js"></script>
+		<!-- Beer listing module -->
+		<script src="./app/beer_listing/beerlisting.module.js"></script>
+		<script src="./app/beer_listing/beerlisting.ctrl.js"></script>
 
+		<!-- TODO - remove once we are up and running 
 		<script src="./app/_test/main.test.js"></script>
+		-->
 
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
