@@ -4,14 +4,13 @@
 		/*
 			* Angular modules
 		*/
-		// 'ngRoute'
+		'ngRoute'
 		/*
 			* Our reusable cross app code modules
 		*/
-		
+
 		/*
 			* 3rd Party modules
 		*/
-	
 	]);
 })();

@@ -5,33 +5,26 @@
 		.module( 'app.core' )
 		.factory( 'dataservice', dataservice );
 
-	function dataservice( $http, $location, $q ) {
+	function dataservice( $http, $q ) {
 		var service = {
-			createBeer : createBeer,
-			readBeer : readBeer,
-			updateBeer : updateBeer,
-			deleteBeer : deleteBeer
+			getBeers : getBeers
 		};
-		function createBeer () {
+		
+		return service;
 
-		}
-		function readBeer () {
-			return $http.get( 'localhost:3333/api/beers' )
+		function getBeers () {
+			return $http.get( 'http://localhost:3333/api/beers' )
 				.then( getBeersCompleted )
 				.catch(function( message ){
 					// exception.catcher('XHR Failed for readBeers')(message);
-					$location.url( '/' );
+					// $location.url( '/' );
 				});
 			function getBeersCompleted ( data, status, headers, config ) {
-				return data.data[0].data.results;
+				console.log('getBeersCompleted fired ', data.data );
+				return data.data;
 			}
 		}
-		function updateBeer () {
 
-		}
-		function deleteBeer () {
-
-		}
 	}
 
 })();

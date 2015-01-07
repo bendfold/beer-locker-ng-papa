@@ -18,17 +18,26 @@
 		</div>
 		-->
 
-		<div class="wrapper">
+		
+		
+	<!-- 	<a ui-sref="state1">State 1</a>
+		<a ui-sref="state2">State 2</a> -->
+		<a ui-sref="beerlisting">Beer list</a>
+		<a ui-sref="newbeer">Add new beer</a>
+		
+		<div ui-view></div>
+
+<!-- 		<div class="wrapper">
 			<header>
 				<div class="title">
 					<h1>Beer locker</h1>
 				</div>
 				<div class="filter">
-					<!-- TODO - Beer filter goes here -->
+					<h1>TODO</h1>
 				</div>
 			</header>
 			<div class="main-content">
-				<!-- <ul class="product-list">
+				<ul class="product-list">
 					<li class="col-md-3 col-sm-6" data-ng-repeat="beer in beers | filter:query | orderBy:orderProp">
 						<ul class="beer-tile">
 							<li ng-if="beer.name">
@@ -61,13 +70,16 @@
 							</li>
 						</ul>
 					</li>
-				</ul> -->
+				</ul>
 			</div>
 		</div>
-		
+ -->
 		<!--  ***** VENDOR SCRIPTS  ***** -->
 		<!-- Angular -->
 		<script src='./app/vendor/angular.min.js'></script>
+		<script src='./app/vendor/angular-route.min.js'></script>
+		<!-- Angular UI -->
+		<script src='./app/vendor/angular-ui-router.min.js'></script>
 		
 		<!-- ***** APP SCRIPTS ***** -->
 		<!-- Bootstraping -->
