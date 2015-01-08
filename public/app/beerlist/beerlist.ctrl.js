@@ -1,11 +1,11 @@
 (function(){
 	'use strict';
 	angular
-		.module( 'app.beerlisting')
-		.controller( 'BeerlistingCtrl', BeerlistingCtrl );
+		.module( 'app.beerlist')
+		.controller( 'BeerlistCtrl', BeerlistCtrl );
 
 	/* @ngInject */
-	function BeerlistingCtrl ( dataservice ) {
+	function BeerlistCtrl ( dataservice ) {
 		var vm = this;
 		vm.beers = [];
 
@@ -25,10 +25,18 @@
 			console.log("get beer fired");
 			return dataservice.getBeers().then(function( data ){
 				vm.beers = data;
-				console.log( 'vm.beers ', vm.beers );
 				return vm.beers;
 			});
 		}
+
+		vm.deleteBeer = function ( beerId ) {
+			console.log( 'beerId ', beerId );
+			return dataservice.deleteBeer( beerId ).then(function( data ){
+
+			});
+		}
+
+		console.log( 'vm ', vm )
 
 	}
 

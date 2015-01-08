@@ -11,19 +11,19 @@
 		/*
 		 * Feature areas
 		 */
-		'app.beerlisting',
+		'app.beerlist',
 		'ngRoute',
 		'ui.router'
 	])
 	.config(function( $stateProvider, $urlRouterProvider ) {
 		// For any unmatched url, redirect to /state1
-		$urlRouterProvider.otherwise("/state1");
+		$urlRouterProvider.otherwise("/beerlist");
 		// Now set up the states
 		$stateProvider
-		.state('beerlisting', {
-			url: "/beerlisting",
-			templateUrl: "./app/beer_listing/beerlisting.html",
-			controller: 'BeerlistingCtrl',
+		.state('beerlist', {
+			url: "/beerlist",
+			templateUrl: "./app/beerlist/beerlist.html",
+			controller: 'BeerlistCtrl',
 			controllerAs: 'vm'
 		})
 		.state('newbeer', {
