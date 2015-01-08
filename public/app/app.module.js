@@ -23,7 +23,8 @@
 		.state('beerlisting', {
 			url: "/beerlisting",
 			templateUrl: "./app/beer_listing/beerlisting.html",
-			controller: 'BeerlistingCtrl'
+			controller: 'BeerlistingCtrl',
+			controllerAs: 'vm'
 		})
 		.state('newbeer', {
 			url: "/newbeer",

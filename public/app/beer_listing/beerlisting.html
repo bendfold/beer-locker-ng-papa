@@ -1,2 +1,37 @@
 <h1>beers are listed here yo!</h1>
-<h3> {{vm.data}} </h3>
+<h3> {{vm.beers}} </h3>
+
+<ul class="product-list">
+	<li data-ng-repeat="beer in vm.beers | filter:query | orderBy:orderProp">
+		<ul class="beer-tile">
+			<li ng-if="beer.name">
+				<p>Beer name: <a href="">{{beer.name}}</a></p>
+			</li>
+			<li ng-if="beer.type">
+				<p>Beer type: <a href="">{{beer.type}}</a></p>
+			</li>
+			<li ng-if="beer.quantity">
+				<p>Currently in stock: {{beer.quantity}}</p>
+			</li>
+			<li ng-if="beer.abv">
+				<p>ABV: {{beer.abv}}%</p>
+			</li> 
+			<li ng-if="beer.origin">
+				<p>Country of origin: {{beer.origin}}</p>
+			</li>
+			<li ng-if="beer.details">
+				<p>Beer details: {{beer.details}}</p>
+			</li>
+			<li class="edit-beer">
+				<p>
+					<a href="#edit">EDIT</a>
+				</p>
+			</li>
+			<li class="delete-beer">
+				<p>
+					<a href="#delete" ng-click="deleteBeer( beer._id )">DELETE</a>
+				</p>
+			</li>
+		</ul>
+	</li>
+</ul>
