@@ -22,7 +22,7 @@
 		$stateProvider
 		.state('beerlist', {
 			url: "/beerlist",
-			templateUrl: "./app/beerlist/beerlist.html",
+			templateUrl: "./app/beerlist/beerlist.tmpl.html",
 			controller: 'BeerlistCtrl',
 			controllerAs: 'vm'
 		})

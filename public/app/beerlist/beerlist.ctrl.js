@@ -5,7 +5,7 @@
 		.controller( 'BeerlistCtrl', BeerlistCtrl );
 
 	/* @ngInject */
-	function BeerlistCtrl ( dataservice ) {
+	function BeerlistCtrl ( dataservice, $scope ) {
 		var vm = this;
 		vm.beers = [];
 
@@ -29,12 +29,17 @@
 			});
 		}
 
-		vm.deleteBeer = function ( beerId ) {
-			console.log( 'beerId ', beerId );
-			return dataservice.deleteBeer( beerId ).then(function( data ){
+		// vm.deleteBeer = function ( beerId ) {
+		// 	console.log( 'beerId ', beerId );
+		// 	// return dataservice.deleteBeer( beerId ).then(function( data ){
 
-			});
-		}
+		// 	// });
+		// }
+
+		$scope.$on( 'removeBeer', function ( evt, args ) {
+			console.log( 'evt ', evt );
+			console.log( 'args ', args );
+		});
 
 		console.log( 'vm ', vm )
 
