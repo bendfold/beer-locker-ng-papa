@@ -5,29 +5,38 @@
 		.controller( 'BeerlistCtrl', BeerlistCtrl );
 
 	/* @ngInject */
-	function BeerlistCtrl ( dataservice, $scope ) {
+	function BeerlistCtrl ( dataservice, $scope, beerLogService ) {
 		var vm = this;
 		vm.beers = [];
 
-		activate();
+		// activate();
 
-		function activate () {
-			// Using a resolver on all routes or dataservice.ready in every controller
-			// var promises = [getAvengers()];
-			// return dataservice.ready(promises).then(function(){
-			return getBeers().then(function() {
-				// logger.info('Activated Beer Listing View');
-				console.log( 'Get beers actived' );
-			});
-		}
+		getBeers();
 
 		function getBeers () {
-			console.log("get beer fired");
-			return dataservice.getBeers().then(function( data ){
+			beerLogService.getBeers().then(function( data ){
 				vm.beers = data;
 				return vm.beers;
 			});
 		}
+
+		// function activate () {
+		// 	// Using a resolver on all routes or dataservice.ready in every controller
+		// 	// var promises = [getAvengers()];
+		// 	// return dataservice.ready(promises).then(function(){
+		// 	return getBeers().then(function() {
+		// 		// logger.info('Activated Beer Listing View');
+		// 		console.log( 'Get beers actived' );
+		// 	});
+		// }
+
+		// function getBeers () {
+		// 	console.log("get beer fired");
+		// 	return dataservice.getBeers().then(function( data ){
+		// 		vm.beers = data;
+		// 		return vm.beers;
+		// 	});
+		// }
 
 		// vm.deleteBeer = function ( beerId ) {
 		// 	console.log( 'beerId ', beerId );
@@ -36,12 +45,15 @@
 		// 	// });
 		// }
 
-		$scope.$on( 'removeBeer', function ( evt, args ) {
-			console.log( 'evt ', evt );
-			console.log( 'args ', args );
-		});
+		// $scope.$on( 'removeBeer', function ( evt, args ) {
+		// 	console.log( 'evt ', evt );
+		// 	console.log( 'args ', args );
+			
+		// 	beerLogService.removeBeerFromVm();
 
-		console.log( 'vm ', vm )
+		// });
+
+		// console.log( 'vm ', vm )
 
 	}
 

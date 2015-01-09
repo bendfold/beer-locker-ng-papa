@@ -27,7 +27,7 @@
 					// $location.url( '/' );
 				});
 			function getBeersCompleted ( data, status, headers, config ) {
-				console.log('getBeersCompleted fired ', data.data );
+				// console.log('getBeersCompleted fired ', data.data );
 				return data.data;
 			}
 		}
