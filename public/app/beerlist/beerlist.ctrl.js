@@ -45,13 +45,13 @@
 		// 	// });
 		// }
 
-		// $scope.$on( 'removeBeer', function ( evt, args ) {
-		// 	console.log( 'evt ', evt );
-		// 	console.log( 'args ', args );
+		$scope.$on( 'removeBeer', function ( evt, args ) {
+			console.log( 'evt ', evt );
+			console.log( 'args ', args );
 			
-		// 	beerLogService.removeBeerFromVm();
+			beerLogService.removeBeer();
 
-		// });
+		});
 
 		// console.log( 'vm ', vm )
 
