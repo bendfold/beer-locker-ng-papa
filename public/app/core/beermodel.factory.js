@@ -2,13 +2,14 @@
 	'use strict';
 	angular
 		.module( 'app.core' )
-		.factory( 'beerLogService', beerLogService );
+		.factory( 'beerCollectionService', beerCollectionService );
 	
-	function beerLogService ( dataservice ) {
+	function beerCollectionService ( dataservice ) {
 		
 		var service = {
 			getBeers : getBeers,
-			removeBeer : removeBeer 
+			removeBeer : removeBeer, 
+			editBeer : editBeer
 		},
 		localBeerCollection = [];
 
@@ -48,6 +49,10 @@
 			}
 
 		}
+
+		function editBeer () {
+			console.log( 'editBeer fired ' );
+		} 
 
 	}
 

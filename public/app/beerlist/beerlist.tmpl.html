@@ -1,8 +1,17 @@
 <h1>beers are listed here yo!</h1>
 <!-- <h3> {{vm.beers}} </h3> -->
 
+<style type="text/css">
+	.edit-panel {
+		display: none;
+	}
+	.edit-mode .edit-panel {
+		display: block;
+	}
+</style>
+
 <ul class="product-list">
-	<li data-ng-repeat="beer in vm.beers | filter:query | orderBy:orderProp">
+	<li data-ng-repeat="beer in vm.beers | filter:query | orderBy:orderProp" id="{{'beer_' + beer._id}}">
 		<ul class="beer-tile">
 			<li data-ng-if="beer.name">
 				<p>Beer name: <a href="">{{beer.name}}</a></p>
@@ -26,6 +35,34 @@
 				<p>
 					<a action-button="editBeer">EDIT</a>
 				</p>
+				<form>
+					<ul class="edit-panel">
+						<li>
+							<label for="edit-name">Name:</label>
+							<input type="text" placeholder="Edit the beer name here" />
+						</li>
+						<li>
+							<label for="edit-name">Type:</label>
+							<input type="text" placeholder="Edit the beer type here" />
+						</li>
+						<li>
+							<label for="edit-name">Quantity:</label>
+							<input  type="number" placeholder="Edit the beer quantity here" />
+						</li>
+						<li>
+							<label for="edit-name">ABV:</label>
+							<input type="number" placeholder="Edit the beer ABV here" />
+						</li>
+						<li>
+							<label for="edit-name">Origin:</label>
+							<input type="text" placeholder="Edit the beer origin here" />
+						</li>
+						<li>
+							<label for="edit-name">Details:</label>
+							<textarea placeholder="Edit the beer details here" ></textarea>
+						</li>
+					</ul>
+				</form>
 			</li>
 			<li class="delete-beer" >
 				<p>

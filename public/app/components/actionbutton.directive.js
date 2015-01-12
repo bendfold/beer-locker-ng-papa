@@ -16,6 +16,8 @@
 		function linkFunc ( scope, el, attr, ctrl ) {
 			el.on('click', function( evt ){
 				
+				console.log( 'el ', el[0] );
+
 				var actionChecklist = [ 'editBeer', 'deleteBeer' ],
 					action;
 
@@ -27,7 +29,7 @@
 					return false;
 				}
 				// Fire off the appropriate action
-				action( scope.beer._id );
+				action( [scope.beer._id, el] );
 
 				// Helper function to ascertain whether the action is allowed or not. 
 				function stringIsInChecklist ( value, index, array ) {
@@ -40,12 +42,12 @@
 	};
 
 	function actionButtonCtrl( $scope, $rootScope ){
-		$scope.deleteBeer = function ( beer_id ) {
-			$rootScope.$broadcast( 'removeBeer', [beer_id]);
+		$scope.deleteBeer = function ( args ) {
+			$rootScope.$broadcast( 'removeBeer', args );
 		}
-		$scope.editBeer = function ( beer_id ) {
+		$scope.editBeer = function ( args ) {
 			console.log('edit beer fired TODO');
-			$rootScope.$broadcast( 'editBeer', [beer_id] );
+			$rootScope.$broadcast( 'editBeer', args );
 		}
 	}
 
