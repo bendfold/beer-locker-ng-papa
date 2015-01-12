@@ -16,21 +16,20 @@
 		beers = [];
 
 		function getBeers () {
-			var foo ;
 			var beerData = dataservice.getBeers().then(function( data ){
-				foo = data;
 				return data;
 			});
-			
-			beers = beerData;
-			console.log('beers ', beers);
+			beers = data;
 			return beerData;
 		}
 
 		function removeBeer ( beer_id ) {
-			// Remove beer from DB
-			// Remove beer from VM
-			console.log( 'vm.beers ', vm.beers );
+
+			console.log( 'beer_id ', beer_id );
+			console.log( 'beers ', beers );
+
+			// Remove from DB
+			// Remove from Local beerData
 		}
 
 	}
