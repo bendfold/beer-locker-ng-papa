@@ -15,10 +15,7 @@
 		
 		function linkFunc ( scope, el, attr, ctrl ) {
 			el.on('click', function( evt ){
-				
-				console.log( 'el ', el[0] );
-
-				var actionChecklist = [ 'editBeer', 'deleteBeer' ],
+				var actionChecklist = [ 'toggleEditPanel', 'deleteBeer', 'putBeer' ],
 					action;
 
 				// Check to see if the string is in the actionsChecklist
@@ -43,11 +40,15 @@
 
 	function actionButtonCtrl( $scope, $rootScope ){
 		$scope.deleteBeer = function ( args ) {
+			// Note these args are coming from the linkFunc above
 			$rootScope.$broadcast( 'removeBeer', args );
 		}
-		$scope.editBeer = function ( args ) {
-			console.log('edit beer fired TODO');
-			$rootScope.$broadcast( 'editBeer', args );
+		$scope.toggleEditPanel = function ( args ) {
+			console.log('args ', args)
+			$rootScope.$broadcast( 'toggleEditPanel', args );
+		}
+		$scope.putBeer = function ( args ) {
+			$rootScope.$broadcast( 'putBeer', args );
 		}
 	}
 

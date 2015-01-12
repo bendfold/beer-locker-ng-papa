@@ -33,8 +33,16 @@
 
 		}
 
-		function putBeer () {
-
+		function putBeer ( beerId, data ) {
+			return $http.put( DB_URL + "/" + beerId, data )
+				.then( putBeerCompleted )
+				.catch(function( message ){
+					console.log( 'XHR Failed for readBeers ', message );
+				});
+			function putBeerCompleted ( data ) {
+				console.log('putBeerCompleted data ', data );
+				return data;
+			}
 		}
 
 		function deleteBeer ( beerId ) {

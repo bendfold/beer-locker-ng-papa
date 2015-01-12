@@ -9,7 +9,7 @@
 		var service = {
 			getBeers : getBeers,
 			removeBeer : removeBeer, 
-			editBeer : editBeer
+			putBeer : putBeer
 		},
 		localBeerCollection = [];
 
@@ -50,9 +50,27 @@
 
 		}
 
-		function editBeer () {
-			console.log( 'editBeer fired ' );
-		} 
+		function putBeer ( args ) {
+			
+			var beerData,
+				beerId = args[0];
+
+			for ( var beer in localBeerCollection ) {
+				if ( localBeerCollection.hasOwnProperty( beer ) ) {
+					if ( localBeerCollection[ beer ]._id === beerId ) {
+						beerData =  localBeerCollection[ beer ];
+					}
+				}
+			}
+			
+			console.log( 'beerData ', beerData );
+			console.log( 'localBeerCollection ', localBeerCollection );
+			console.log( 'args[0] ', args[0] );
+
+
+			dataservice.deleteBeer( args[0], beerData );
+						
+		};
 
 	}
 

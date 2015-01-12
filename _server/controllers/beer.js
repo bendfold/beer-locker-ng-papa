@@ -61,6 +61,12 @@ exports.putBeer = function (req, res) {
 		}
 		// Update the existing beer quantity
 		beer.quantity = req.body.quantity;
+		// beer.name = req.body.name;
+		// beer.type = req.body.type;
+		// beer.quantity = req.body.quantity;
+		// beer.abv = req.body.abv;
+		// beer.origin = req.body.origin;
+		// beer.details = req.body.details;
 
 		// Save the beer and check for errors
 		beer.save(function (err) {
@@ -69,6 +75,7 @@ exports.putBeer = function (req, res) {
 			}
 			res.json(beer);
 		});
+		
 	});
 };
 
