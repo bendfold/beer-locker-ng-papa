@@ -41,14 +41,11 @@
 
 	function actionButtonCtrl( $scope, $rootScope ){
 		$scope.deleteBeer = function ( beer_id ) {
-			
-			var foo = 123;
-
-			$rootScope.$broadcast( 'removeBeer', [beer_id, foo]);
+			$rootScope.$broadcast( 'removeBeer', [beer_id]);
 		}
 		$scope.editBeer = function ( beer_id ) {
 			console.log('edit beer fired TODO');
-			$rootScope.$broadcast( 'editBeer', beer_id );
+			$rootScope.$broadcast( 'editBeer', [beer_id] );
 		}
 	}
 

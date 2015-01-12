@@ -23,11 +23,8 @@
 				.then( getBeersCompleted )
 				.catch(function( message ){
 					console.log( 'XHR Failed for getBeers ', message );
-					// exception.catcher('XHR Failed for getBeers ')(message);
-					// $location.url( '/' );
 				});
 			function getBeersCompleted ( data, status, headers, config ) {
-				// console.log('getBeersCompleted fired ', data.data );
 				return data.data;
 			}
 		}
@@ -45,17 +42,10 @@
 				.then( deleteBeerCompleted )
 				.catch(function( message ){
 					console.log( 'XHR Failed for readBeers ', message );
-					// exception.catcher('XHR Failed for readBeers')(message);
-					// $location.url( '/' );
 				});
-			function deleteBeerCompleted ( data, status, headers, config ) {
+			function deleteBeerCompleted ( data ) {
 				console.log('deleteBeerCompleted data ', data );
-				console.log('deleteBeerCompleted fired ', data );
-				console.log('deleteBeerCompleted status ', status );
-				console.log('deleteBeerCompleted config ', config );
-				// return data.data;
-				// Remove beer from DB
-				// Remove beer from local model
+				return data;
 			}
 		}
 
