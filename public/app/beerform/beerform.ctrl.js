@@ -4,8 +4,8 @@
 		module('app.beerform')
 		.controller( 'BeerFormCtrl', BeerFormCtrl );
 
-	function BeerFormCtrl () {
-
+	function BeerFormCtrl ( beerCollectionService ) {
+		var vm = this;
 	}
 
 
