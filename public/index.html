@@ -11,69 +11,13 @@
 		<link rel='stylesheet' href='./content/css/main.css'>
 	</head>
 	<body>
-		
-		<!-- 
-		<div class="test" data-ng-controller='MainCtrl' >
-			<h1> {{msg}} </h1>
-		</div>
-		-->
 
-		
-		
-	<!-- 	<a ui-sref="state1">State 1</a>
-		<a ui-sref="state2">State 2</a> -->
+	<!-- TODO Temp nav -->
 		<a ui-sref="beerlist">Beer list</a>
 		<a ui-sref="newbeer">Add new beer</a>
-		
+	<!-- TODO Temp nav -->
 		<div ui-view></div>
 
-<!-- 		<div class="wrapper">
-			<header>
-				<div class="title">
-					<h1>Beer locker</h1>
-				</div>
-				<div class="filter">
-					<h1>TODO</h1>
-				</div>
-			</header>
-			<div class="main-content">
-				<ul class="product-list">
-					<li class="col-md-3 col-sm-6" data-ng-repeat="beer in beers | filter:query | orderBy:orderProp">
-						<ul class="beer-tile">
-							<li ng-if="beer.name">
-								<p>Beer name: <a href="">{{beer.name}}</a></p>
-							</li>
-							<li ng-if="beer.type">
-								<p>Beer type: <a href="">{{beer.type}}</a></p>
-							</li>
-							<li ng-if="beer.quantity">
-								<p>Currently in stock: {{beer.quantity}}</p>
-							</li>
-							<li ng-if="beer.abv">
-								<p>ABV: {{beer.abv}}%</p>
-							</li> 
-							<li ng-if="beer.origin">
-								<p>Country of origin: {{beer.origin}}</p>
-							</li>
-							<li ng-if="beer.details">
-								<p>Beer details: {{beer.details}}</p>
-							</li>
-							<li class="edit-beer">
-								<p>
-									<a href="#edit">EDIT</a>
-								</p>
-							</li>
-							<li class="delete-beer">
-								<p>
-									<a href="#delete" ng-click="deleteBeer( beer._id )">DELETE</a>
-								</p>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</div>
- -->
 		<!--  ***** VENDOR SCRIPTS  ***** -->
 		<!-- Angular -->
 		<script src='./app/vendor/angular.min.js'></script>
@@ -92,9 +36,12 @@
 		<!-- Beer listing module -->
 		<script src="./app/beerlist/beerlist.module.js"></script>
 		<script src="./app/beerlist/beerlist.ctrl.js"></script>
-
-
+		<!-- Components -->
 		<script src="./app/components/actionbutton.directive.js"></script>
+		<!-- beerform -->
+		<script src="./app/beerform/beerform.module.js"></script>
+		<script src="./app/beerform/beerform.ctrl.js"></script>
+		<script src="./app/beerform/beerform.directive.js"></script>
 
 		<!-- TODO - remove once we are up and running 
 		<script src="./app/_test/main.test.js"></script>

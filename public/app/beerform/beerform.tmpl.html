@@ -1,0 +1,31 @@
+<form action="#" id="{{'edit_form_' + beer._id}}">
+	<ul class="edit-panel">
+		<li>
+			<label for="edit-name">Name:</label>
+			<input type="text" placeholder="Edit the beer name here" ng-model="beer.name" />
+		</li>
+		<li>
+			<label for="edit-name">Type:</label>
+			<input type="text" placeholder="Edit the beer type here" ng-model="beer.type" />
+		</li>
+		<li>
+			<label for="edit-name">Quantity:</label>
+			<input  type="number" placeholder="Edit the beer quantity here" ng-model="beer.quantity" />
+		</li>
+		<li>
+			<label for="edit-name">ABV:</label>
+			<input type="number" placeholder="Edit the beer ABV here" ng-model="beer.abv" />
+		</li>
+		<li>
+			<label for="edit-name">Origin:</label>
+			<input type="text" placeholder="Edit the beer origin here" ng-model="beer.origin" />
+		</li>
+		<li>
+			<label for="edit-name">Details:</label>
+			<textarea placeholder="Edit the beer details here" ng-model="beer.details" ></textarea>
+		</li>
+		<li>
+			<a action-button="putBeer">SUBMIT</a>
+		</li>
+	</ul>
+</form>

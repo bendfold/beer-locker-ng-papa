@@ -6,9 +6,7 @@
 	function actionButton () {
 		var directive = {
 			restrict: 'A',
-			// replace: true,
 			controller: actionButtonCtrl,
-			// templateUrl: './app/components/removebeerbutton.tmpl.html',
 			link: linkFunc
 		};
 		return directive;
