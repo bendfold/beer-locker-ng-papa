@@ -54,20 +54,20 @@ exports.getBeer = function (req, res) {
 
 // Create endpoint /api/beers/:beer_id for PUT
 exports.putBeer = function (req, res) {
+
 	// Use the Beer model to find a specific beer
 	Beer.findById(req.params.beer_id, function (err, beer) {
 		if (err) {
 			res.send(err);
 		}
 		// Update the existing beer quantity
+		beer.name = req.body.name;
+		beer.type = req.body.type;
 		beer.quantity = req.body.quantity;
-		// beer.name = req.body.name;
-		// beer.type = req.body.type;
-		// beer.quantity = req.body.quantity;
-		// beer.abv = req.body.abv;
-		// beer.origin = req.body.origin;
-		// beer.details = req.body.details;
-
+		beer.abv = req.body.abv;
+		beer.origin = req.body.origin;
+		beer.details = req.body.details;
+		
 		// Save the beer and check for errors
 		beer.save(function (err) {
 			if (err) {

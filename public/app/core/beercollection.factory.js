@@ -58,7 +58,7 @@
 			for ( var beer in localBeerCollection ) {
 				if ( localBeerCollection.hasOwnProperty( beer ) ) {
 					if ( localBeerCollection[ beer ]._id === beerId ) {
-						beerData =  localBeerCollection[ beer ];
+						beerData = localBeerCollection[ beer ];
 					}
 				}
 			}
@@ -68,7 +68,7 @@
 			console.log( 'args[0] ', args[0] );
 
 
-			dataservice.deleteBeer( args[0], beerData );
+			dataservice.putBeer( args[0], beerData );
 						
 		};
 
