@@ -9,10 +9,12 @@
 		var vm = this;
 		vm.beers = [];
 
-		getBeers();
+		activate();
 
-		function getBeers () {
-			beerCollectionService.getBeers().then(function( data ){
+		////////////
+
+		function activate() {
+			return 	beerCollectionService.getBeers().then(function( data ){
 				vm.beers = data;
 				return vm.beers;
 			});
@@ -29,8 +31,6 @@
 		});
 
 		$scope.$on( 'putBeer', function ( evt, args ) {
-			// console.log( 'evt ', evt );
-			// console.log( 'args ', args );
 			beerCollectionService.putBeer( args );
 		
 		});
