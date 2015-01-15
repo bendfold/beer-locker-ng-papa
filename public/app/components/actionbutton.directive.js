@@ -25,16 +25,8 @@
 					console.error( 'Developer warning - Specified action is not valid' );
 					return false;
 				}
-
-				// console.log( 'actionButton SCOPE ', scope );
-				// console.log( 'actionButton attr ', attr );
-				// console.log( 'scope.beer._id OOOOOO  ', scope.beer._id );
-
+				// Had to add a check in here as the form is used on both the edit & add view so had to bind it via issolate scope 
 				beer_id = scope.beer ? scope.beer._id : scope.model._id;
-
-				console.log( 'scope.beer_id fucker', beer_id );
-
-
 
 				// Fire off the appropriate action
 				action( [ beer_id, el ] );

@@ -8,6 +8,7 @@ function beerForm() {
 		templateUrl: './app/beerform/beerform.tmpl.html',
 		scope: {
 			submitAction: '@',
+			// This creates a 2 way binding to the parent scope for the model attribute
 			model: '='
 		},
 		link: linkFunc,
@@ -18,21 +19,13 @@ function beerForm() {
 	return directive;
 
 	function linkFunc(scope, el, attr, ctrl) {
-		console.log('linkFunc ------------------');
-		// // console.log('scope: scope.max = %i', scope.max);
-		// // console.log('el: scope.vm.min = %i', scope.vm.min);
-		// // console.log('attr: scope.vm.max = %i', scope.vm.max);
-		// // console.log('ctrl: scope.vm.max = %i', scope.vm.max);
-
-		console.log('scope ', scope );
+		// console.log('linkFunc ------------------');
+		// console.log('scope ', scope );
 		// console.log('el ', el );
-		console.log('attr ', attr );
+		// console.log('attr ', attr );
 		// console.log('ctrl ', ctrl);
 
 		scope.vm.submitAction = attr.submitAction;
-
-
-		// console.log('scope ', scope );
 
 	}
 }
