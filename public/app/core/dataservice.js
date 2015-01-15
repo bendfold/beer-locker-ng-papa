@@ -30,7 +30,7 @@
 		}
 
 		function postBeer () {
-
+			console.log('postBeer in dataservice fired');
 		}
 
 		function putBeer ( beerId, data ) {

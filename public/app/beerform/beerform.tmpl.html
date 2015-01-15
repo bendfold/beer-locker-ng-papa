@@ -1,6 +1,49 @@
 <form action="#" id="{{'edit_form_' + beer._id}}">
 	<ul class="edit-panel">
 		<li>
+			<h1>
+				{{model.name}}
+			</h1>
+		</li>
+
+		<li>
+			<label for="edit-name">Name:</label>
+			<input type="text" placeholder="Edit the beer name here" ng-model="model.name" />
+		</li>
+		<li>
+			<label for="edit-name">Type:</label>
+			<input type="text" placeholder="Edit the beer type here" ng-model="model.type" />
+		</li>
+		<li>
+			<label for="edit-name">Quantity:</label>
+			<input  type="number" placeholder="Edit the beer quantity here" ng-model="model.quantity" />
+		</li>
+		<li>
+			<label for="edit-name">ABV:</label>
+			<input type="number" placeholder="Edit the beer ABV here" ng-model="model.abv" />
+		</li>
+		<li>
+			<label for="edit-name">Origin:</label>
+			<input type="text" placeholder="Edit the beer origin here" ng-model="model.origin" />
+		</li>
+		<li>
+			<label for="edit-name">Details:</label>
+			<textarea placeholder="Edit the beer details here" ng-model="model.details" ></textarea>
+		</li>
+		<li>
+			<a action-button="{{vm.submitAction}}">SUBMIT {{vm.submitAction}} </a>
+		</li> 
+	 	
+		<li ng-repeat="field in vm.fields" >
+			<label for="edit-{{field.key}}">
+				{{field.label}}
+			</label>
+			<input type="text" ng-model="" />
+		</li>
+		
+		<!-- 
+
+		<li>
 			<label for="edit-name">Name:</label>
 			<input type="text" placeholder="Edit the beer name here" ng-model="beer.name" />
 		</li>
@@ -25,7 +68,17 @@
 			<textarea placeholder="Edit the beer details here" ng-model="beer.details" ></textarea>
 		</li>
 		<li>
-			<a action-button="putBeer">SUBMIT</a>
+			<a action-button="{{vm.submitAction}}">SUBMIT {{vm.submitAction}} </a>
+		</li> 
+	 	
+		<li ng-repeat="field in vm.fields" >
+			<label for="edit-{{field.key}}">
+				{{field.label}}
+			</label>
+			<input type="text" ng-model="" />
 		</li>
+
+		-->
+		
 	</ul>
 </form>

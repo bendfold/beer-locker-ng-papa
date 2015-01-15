@@ -32,7 +32,6 @@
 
 		$scope.$on( 'putBeer', function ( evt, args ) {
 			beerCollectionService.putBeer( args );
-		
 		});
 
 	}

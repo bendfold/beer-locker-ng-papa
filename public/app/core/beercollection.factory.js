@@ -9,13 +9,12 @@
 		var service = {
 			getBeers : getBeers,
 			removeBeer : removeBeer, 
-			putBeer : putBeer
+			putBeer : putBeer,
+			postBeer : postBeer
 		},
 		localBeerCollection = [];
 
 		return service;
-
-		
 
 		function getBeers () {
 			var beerData = dataservice.getBeers().then(function( data ){
@@ -25,7 +24,7 @@
 				return data;
 			});
 			return beerData;
-		}
+		};
 
 		function removeBeer ( beer_id ) {
 			// Remove from DB
@@ -38,7 +37,6 @@
 					console.error( 'Dev note: Beer not removed' );
 				}
 			});
-			
 			function removeBeerFromLocalModel ( beer_id ) {
 				var i;
 				for ( i = 0; i < localBeerCollection.length; i += 1 ) {
@@ -47,11 +45,9 @@
 					}
 				}
 			}
-
-		}
+		};
 
 		function putBeer ( args ) {
-			
 			var beerData,
 				beerId = args[0];
 
@@ -67,10 +63,13 @@
 			console.log( 'localBeerCollection ', localBeerCollection );
 			console.log( 'args[0] ', args[0] );
 
-
 			dataservice.putBeer( args[0], beerData );
-						
+
 		};
+
+		function postBeer () {
+			console.log('postBeer in beerCollectionService fired');
+		}
 
 	}
 

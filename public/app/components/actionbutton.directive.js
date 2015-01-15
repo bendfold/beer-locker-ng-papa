@@ -7,14 +7,16 @@
 		var directive = {
 			restrict: 'A',
 			controller: actionButtonCtrl,
+			controllerAs : 'vm',
 			link: linkFunc
 		};
 		return directive;
 		
 		function linkFunc ( scope, el, attr, ctrl ) {
 			el.on('click', function( evt ){
-				var actionChecklist = [ 'toggleEditPanel', 'deleteBeer', 'putBeer' ],
-					action;
+				var actionChecklist = [ 'toggleEditPanel', 'deleteBeer', 'putBeer', 'postBeer' ],
+					action,
+					beer_id;
 
 				// Check to see if the string is in the actionsChecklist
 				action = actionChecklist.some( stringIsInChecklist ) ? scope[attr.actionButton] : false;
@@ -23,8 +25,19 @@
 					console.error( 'Developer warning - Specified action is not valid' );
 					return false;
 				}
+
+				// console.log( 'actionButton SCOPE ', scope );
+				// console.log( 'actionButton attr ', attr );
+				// console.log( 'scope.beer._id OOOOOO  ', scope.beer._id );
+
+				beer_id = scope.beer ? scope.beer._id : scope.model._id;
+
+				console.log( 'scope.beer_id fucker', beer_id );
+
+
+
 				// Fire off the appropriate action
-				action( [scope.beer._id, el] );
+				action( [ beer_id, el ] );
 
 				// Helper function to ascertain whether the action is allowed or not. 
 				function stringIsInChecklist ( value, index, array ) {
@@ -46,7 +59,11 @@
 			$rootScope.$broadcast( 'toggleEditPanel', args );
 		}
 		$scope.putBeer = function ( args ) {
+			console.log( 'args ', args );
 			$rootScope.$broadcast( 'putBeer', args );
+		}
+		$scope.postBeer = function ( args ) {
+			$rootScope.$broadcast( 'postBeer', args );
 		}
 	}
 
