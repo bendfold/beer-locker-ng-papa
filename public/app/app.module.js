@@ -29,9 +29,9 @@
 		})
 		.state('newbeer', {
 			url: "/newbeer",
-			templateUrl: "./app/_test/newbeer_test.html"
-			// controller: 'BeerFormCtrl',
-			// controllerAs: 'vm'
+			templateUrl: "./app/_test/newbeer_test.html",
+			controller: 'BeerFormCtrl',
+			controllerAs: 'vm'
 		});
 	});
 

@@ -16,16 +16,13 @@ exports.postBeers = function (req, res) {
 
 	// Save the beer and check for errors
 	beer.save(function (err) {
-
 		if (err) {
 			res.send(err);
 		}
-
 		res.json({
 			message: 'Beer added to the locker!',
 			data: beer
 		});
-		
 	});
 };
 

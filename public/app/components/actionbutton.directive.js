@@ -25,8 +25,20 @@
 					console.error( 'Developer warning - Specified action is not valid' );
 					return false;
 				}
-				// Had to add a check in here as the form is used on both the edit & add view so had to bind it via issolate scope 
+
 				beer_id = scope.beer ? scope.beer._id : scope.model._id;
+
+				// if ( scope.model ) {
+				// 	// Had to add a check in here as the form is used on both the edit & add view so had to bind it via issolate scope 
+				// 	// This seems a bit wierd, seems we have to make Angular check the beers dont exist before we can access the model, which is just a link to the beer....odd
+				// 	beer_id = scope.beer ? scope.beer._id : scope.model._id;
+				// } else {
+				// 	// This one is just for when we do the POST, dont need an ID really but the signature expects one, we will just bin this later
+				// 	beer_id = Math.floor(Math.random()*1000000000);
+				// }
+				// 
+				// 
+				console.log(  'beer_id ', beer_id );
 
 				// Fire off the appropriate action
 				action( [ beer_id, el ] );

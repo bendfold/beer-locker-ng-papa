@@ -58,17 +58,16 @@
 					}
 				}
 			}
-			
-			console.log( 'beerData ', beerData );
-			console.log( 'localBeerCollection ', localBeerCollection );
-			console.log( 'args[0] ', args[0] );
 
 			dataservice.putBeer( args[0], beerData );
 
 		};
 
-		function postBeer () {
+		function postBeer ( newBeerData ) {
 			console.log('postBeer in beerCollectionService fired');
+		
+			dataservice.postBeer( newBeerData );
+		
 		}
 
 	}

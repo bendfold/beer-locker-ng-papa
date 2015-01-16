@@ -29,8 +29,17 @@
 			}
 		}
 
-		function postBeer () {
-			console.log('postBeer in dataservice fired');
+		function postBeer ( data ) {
+			console.log('postBeer in dataservice fired ', data );
+			return $http.post( DB_URL, data )
+				.then( postBeerCompleted )
+				.catch(function( message ){
+					console.log( 'XHR Failed for postBeerCompleted ', message );
+				});
+			function postBeerCompleted () {
+				console.log('postBeer data ', data );
+				return data;
+			}
 		}
 
 		function putBeer ( beerId, data ) {

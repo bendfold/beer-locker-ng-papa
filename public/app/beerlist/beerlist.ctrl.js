@@ -5,7 +5,7 @@
 		.controller( 'BeerlistCtrl', BeerlistCtrl );
 
 	/* @ngInject */
-	function BeerlistCtrl ( dataservice, $scope, beerCollectionService ) {
+	function BeerlistCtrl ( $scope, beerCollectionService ) {
 		var vm = this;
 		vm.beers = [];
 
