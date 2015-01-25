@@ -12,6 +12,7 @@
 		 * Feature areas
 		 */
 		'app.beerlist',
+		'app.newbeer',
 		'app.beerform',
 		'ngRoute',
 		'ui.router'
@@ -29,8 +30,8 @@
 		})
 		.state('newbeer', {
 			url: "/newbeer",
-			templateUrl: "./app/_test/newbeer_test.html",
-			controller: 'BeerFormCtrl',
+			templateUrl: "./app/newbeer/newbeer.tmpl.html",
+			controller: 'NewBeerCtrl',
 			controllerAs: 'vm'
 		});
 	});
