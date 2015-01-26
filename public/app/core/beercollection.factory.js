@@ -29,12 +29,11 @@
 		function removeBeer ( beer_id ) {
 			// Remove from DB
 			dataservice.deleteBeer( beer_id ).then(function( data ){
-				console.log( data , data.status, beer_id );
 				if ( data.status === 200 ) {
 					// Remove from Local beerData
 					removeBeerFromLocalModel( beer_id );
 				} else {
-					console.error( 'Dev note: Beer not removed' );
+					console.error( 'TODO - Dev note: Beer not removed' );
 				}
 			});
 			function removeBeerFromLocalModel ( beer_id ) {
@@ -64,8 +63,6 @@
 		};
 
 		function postBeer ( newBeerData ) {
-			console.log('postBeer in beerCollectionService fired');
-		
 			dataservice.postBeer( newBeerData );
 		
 		}

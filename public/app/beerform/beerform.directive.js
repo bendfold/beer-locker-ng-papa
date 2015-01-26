@@ -19,34 +19,12 @@ function beerForm() {
 	return directive;
 
 	function linkFunc(scope, el, attr, ctrl) {
-		console.log('linkFunc ------------------');
-		console.log('scope ', scope );
-		console.log('el ', el );
-		console.log('attr ', attr );
-		console.log('ctrl ', ctrl);
-
 		scope.vm.submitAction = attr.submitAction;
-		// scope.vm.model = model;
-
 	}
 }
 
 BeerFormListCtrl.$inject = ['$scope', 'beerCollectionService'];
 
 function BeerFormListCtrl( $scope, beerCollectionService ) {
-	console.log('BeerFormListCtrl ------------------');
-	// // Injecting $scope just for comparison
 	var vm = this;
-	// vm.submitAction = '';
-
-	// console.log('vm ', vm );
-	// console.log('$scope ', $scope );
-	
-	
-
-	// vm.min = 3; 
-	// vm.max = $scope.max; 
-	// console.log('CTRL: $scope.max = %i', $scope.max);
-	// console.log('CTRL: vm.min = %i', vm.min);
-	// console.log('CTRL: vm.max = %i', vm.max);
 }

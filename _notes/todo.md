@@ -1,10 +1,12 @@
 ANGULAR TASKS
-* Have the edit panel shut once you click submit
-* Form validation, qunat & abv only to except numbers
-* Replace test new beer with proper module
-* Get quanity increment / decrement hooked up to PUT service
-* Add product filtering / search
-* Added image upload (Ang + Node job)
+* Have the edit panel shut once you click submit.
+* Submit on new beer should take you to main page.
+* Form validation, qunat & abv only to except numbers.
+* Replace test new beer with proper module.
+* Get quanity increment / decrement hooked up to PUT service.
+* Add product filtering / search.
+* Added image upload (Ang + Node job).
+* Error handling
 
 
 CSS TASKS
