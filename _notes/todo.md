@@ -1,8 +1,5 @@
 ANGULAR TASKS
 ----------------------------
-* Have the edit panel shut once you click submit.
-* Submit on new beer should take you to main page.
-
 * Added image upload (Ang + Node job).
 
 * Form validation, quant & abv only to except numbers.
