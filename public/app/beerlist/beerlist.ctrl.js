@@ -5,7 +5,7 @@
 		.controller( 'BeerlistCtrl', BeerlistCtrl );
 
 	/* @ngInject */
-	function BeerlistCtrl ( $scope, beerCollectionService ) {
+	function BeerlistCtrl ( $scope, beerCollectionService, $rootScope ) {
 		var vm = this;
 		vm.beers = [];
 
@@ -31,7 +31,10 @@
 		});
 
 		$scope.$on( 'putBeer', function ( evt, args ) {
+			// Add the changes to the DB
 			beerCollectionService.putBeer( args );
+			// Close the panel up
+			$rootScope.$broadcast( 'toggleEditPanel', args );
 		});
 
 	}
