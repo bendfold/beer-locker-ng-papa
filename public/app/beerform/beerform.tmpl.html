@@ -2,27 +2,34 @@
 	<ul class="edit-panel">
 		<!-- NOTE Model in this view is the one we pass in to the directive attribute i.e. beer -->
 		<li>
-			<label for="edit-name">Name:</label>
+			<label for="editName">Name:</label>
 			<input type="text" placeholder="Edit the beer name here" ng-model="model.name" />
 		</li>
 		<li>
-			<label for="edit-name">Type:</label>
+			<label for="imageUpload">Select an image file:</label>
+			<input type="file" id="fileInput" />
+			<div id="fileDisplayArea">
+				
+			</div>
+		</li>
+		<li>
+			<label for="editType">Type:</label>
 			<input type="text" placeholder="Edit the beer type here" ng-model="model.type" />
 		</li>
 		<li>
-			<label for="edit-name">Quantity:</label>
+			<label for="editQuantity">Quantity:</label>
 			<input  type="number" placeholder="Edit the beer quantity here" ng-model="model.quantity" />
 		</li>
 		<li>
-			<label for="edit-name">ABV:</label>
+			<label for="editABV">ABV:</label>
 			<input type="number" placeholder="Edit the beer ABV here" ng-model="model.abv" />
 		</li>
 		<li>
-			<label for="edit-name">Origin:</label>
+			<label for="editOrigin">Origin:</label>
 			<input type="text" placeholder="Edit the beer origin here" ng-model="model.origin" />
 		</li>
 		<li>
-			<label for="edit-name">Details:</label>
+			<label for="editDetails">Details:</label>
 			<textarea placeholder="Edit the beer details here" ng-model="model.details" ></textarea>
 		</li>
 		<li>
