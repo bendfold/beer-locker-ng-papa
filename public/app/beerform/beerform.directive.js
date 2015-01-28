@@ -31,25 +31,40 @@ function beerForm() {
 
 			fileInput.addEventListener( 'change', function ( e ) {
 				
+				console.log( 'fileInput in change ---- ', fileInput.files );
+
 				var file = fileInput.files[0];
 				var imageType = /image.*/;
 
 				if ( file.type.match( imageType ) ) {
 					
 					var reader = new FileReader();
+
 					reader.onload = function ( e ) {
 						console.log( 'reader e ', e );
+					
 						fileDisplayArea.innerHtml = "";
 						
 						var img = new Image();
 						
 						console.log( 'reader ', reader );
+						console.log( 'reader.result ', reader.result );
 
 						img.src = reader.result;
 
 						fileDisplayArea.appendChild( img );
+					
 					}
-					reader.readAsDataURL( file );
+					console.log( 'file ', file );
+					
+					var binStr = reader.readAsBinaryString( file );
+
+					// reader.readAsDataURL( file );
+					// reader.readAsArrayBuffer( file );
+
+					// console.log( 'FileReader.readAsText ', reader.readAsText( file ) );
+
+				
 				} else {
 					fileDisplayArea.innerHtml = 'File not supported!';
 				}
