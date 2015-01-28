@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 // Define our beer schema
 var BeerSchema = new mongoose.Schema({
 	name: String,
+	image: String,
 	type: String,
 	quantity: Number,
 	abv: Number,
