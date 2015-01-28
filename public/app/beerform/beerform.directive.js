@@ -38,26 +38,36 @@ function beerForm() {
 
 				if ( file.type.match( imageType ) ) {
 					
-					var reader = new FileReader();
+					var reader01 = new FileReader();
+					var reader02 = new FileReader();
 
-					reader.onload = function ( e ) {
+					reader01.onload = function ( e ) {
 						console.log( 'reader e ', e );
 					
 						fileDisplayArea.innerHtml = "";
 						
 						var img = new Image();
 						
-						console.log( 'reader ', reader );
-						console.log( 'reader.result ', reader.result );
+						// console.log( 'reader ', reader );
 
-						img.src = reader.result;
+						img.src = reader01.result;
 
 						fileDisplayArea.appendChild( img );
 					
 					}
 					console.log( 'file ', file );
 					
-					var binStr = reader.readAsBinaryString( file );
+					// var binStr = reader.readAsBinaryString( file );
+					reader01.readAsDataURL( file );
+
+					reader02.onloadend = function ( e ) {
+						
+						console.log( 'reader02.result ', reader02.result );
+					
+					}
+
+					reader02.readAsBinaryString( file );
+
 
 					// reader.readAsDataURL( file );
 					// reader.readAsArrayBuffer( file );
