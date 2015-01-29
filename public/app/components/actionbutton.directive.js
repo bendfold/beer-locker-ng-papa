@@ -28,7 +28,7 @@
 
 				beer_id = scope.beer ? scope.beer._id : scope.model._id;
 
-				// Fire off the appropriate action
+				// Fire off the appropriate action, TODO - Relook at how this is working.
 				action( [ beer_id, el ] );
 
 				// Helper function to ascertain whether the action is allowed or not. 
@@ -42,6 +42,7 @@
 	};
 
 	function actionButtonCtrl( $scope, $rootScope ){
+
 		$scope.deleteBeer = function ( args ) {
 			// Note these args are coming from the linkFunc above
 			$rootScope.$broadcast( 'removeBeer', args );
@@ -55,6 +56,7 @@
 		$scope.postBeer = function ( args ) {
 			$rootScope.$broadcast( 'postBeer', args );
 		}
+
 	}
 
 })();

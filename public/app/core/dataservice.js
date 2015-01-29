@@ -11,10 +11,9 @@
 			getBeers : getBeers,
 			postBeer : postBeer,
 			putBeer : putBeer,
-			deleteBeer : deleteBeer
+			deleteBeer : deleteBeer,
+			postImgToImgur : postImgToImgur
 		};
-
-
 		
 		return service;
 
@@ -66,6 +65,52 @@
 			}
 		}
 
+		function postImgToImgur ( image ) {
+
+			console.log( 'postImgToImgur image ', image );
+
+			var req = {
+				method: 'POST',
+				url: 'https://api.imgur.com/3/image',
+				headers : {
+					'Authorization' : 'Client-ID 283e5d32df32535'
+				},
+				data : {
+					'image' : image
+				}
+			};
+
+			$http( req ).then( imagePosted )
+				.catch(function( message ){
+					console.log( 'XHR Failed for readBeers ', message );
+				});
+			function imagePosted ( data ) {
+				console.log( 'imagePosted ', data );
+				return data;
+			}
+
+			// return $http.post( 'https://api.imgur.com/3/image' )
+			// 	.then( imagePosted )
+			// 	.catch(function( message ){
+			// 		console.log( 'XHR Failed for readBeers ', message );
+			// 	});
+			// function imagePosted ( data ) {
+			// 	console.log( 'imagePosted ', data );
+			// 	return data;
+			// }
+		
+
+
+
+		}
+
 	}
 
 })();
+
+
+
+
+
+
+
