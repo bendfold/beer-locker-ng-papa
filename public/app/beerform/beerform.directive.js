@@ -42,32 +42,40 @@ function beerForm() {
 					var reader02 = new FileReader();
 
 					reader01.onload = function ( e ) {
-						console.log( 'reader e ', e );
-					
+						// console.log( 'reader e ', e );
 						fileDisplayArea.innerHtml = "";
-						
 						var img = new Image();
-						
 						// console.log( 'reader ', reader );
-
 						img.src = reader01.result;
-
 						fileDisplayArea.appendChild( img );
-					
 					}
-					console.log( 'file ', file );
+
 					
-					// var binStr = reader.readAsBinaryString( file );
+
+					// console.log( 'file ', file );
 					reader01.readAsDataURL( file );
+					// var x = reader01.readAsDataURL( file );
+					// var y = reader01.readAsBinaryString( file );
+
+					// console.log( 'x ', x);
+					// console.log('y', y );
 
 					reader02.onloadend = function ( e ) {
 						
-						console.log( 'reader02.result ', reader02.result );
-					
+						// console.log( 'reader02.result ', reader02.result );
+						scope.model.imgData = reader02.result;
+
+						console.log( 'scope.model --------- ', scope.model );
 					}
 
 					reader02.readAsBinaryString( file );
 
+console.log( 'scope ', scope );
+console.log( 'scope ', scope.model );
+
+// console.log( 'el ', el );
+// console.log( 'attr ', attr );
+// console.log( 'ctrl ', ctrl );
 
 					// reader.readAsDataURL( file );
 					// reader.readAsArrayBuffer( file );
