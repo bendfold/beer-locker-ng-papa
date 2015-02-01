@@ -80,10 +80,12 @@
 				}
 			};
 
-			$http( req ).then( imagePosted )
-				.catch(function( message ){
-					console.log( 'XHR Failed for readBeers ', message );
-				});
+			return $http( req )
+			.then( imagePosted )
+			.catch(function( message ){
+				console.log( 'XHR Failed for readBeers ', message );
+			});
+			
 			function imagePosted ( data ) {
 				console.log( 'imagePosted ', data );
 				return data;

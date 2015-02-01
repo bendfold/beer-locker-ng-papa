@@ -108,7 +108,12 @@ function BeerFormListCtrl( $scope, beerCollectionService, dataservice ) {
 	
 	console.log( 'BeerFormListCtrl dataservice ', dataservice );
 
-	dataservice.postImgToImgur( image );
+	// dataservice.postImgToImgur( image );
+	dataservice.postImgToImgur( image ).then(function( data ){
+		console.log( 'data +++++++++ ', data );
+	});
+
+	// console.log(  'dataservice.postImgToImgur( image ) ', dataservice.postImgToImgur( image ) );
 
 };
 
