@@ -67,27 +67,31 @@
 
 		function postImgToImgur ( image ) {
 
-			console.log( 'postImgToImgur image ', image );
+			// console.log( 'postImgToImgur image ', image );
 
 			var req = {
 				method: 'POST',
 				url: 'https://api.imgur.com/3/image',
 				headers : {
-					'Authorization' : 'Client-ID 283e5d32df32535'
+					Authorization : 'Client-ID 283e5d32df32535',
+					Accept: 'application/json'
 				},
 				data : {
-					'image' : image
+					image : image,
+					type: 'base64'
 				}
 			};
 
 			return $http( req )
 			.then( imagePosted )
 			.catch(function( message ){
-				console.log( 'XHR Failed for readBeers ', message );
+				console.log( 'XHR Failed for postImgToImgur ', message );
 			});
+
+
 			
 			function imagePosted ( data ) {
-				console.log( 'imagePosted ', data );
+				// console.log( 'imagePosted ', data );
 				return data;
 			}
 
