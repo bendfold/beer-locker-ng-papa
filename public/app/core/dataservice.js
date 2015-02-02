@@ -67,8 +67,6 @@
 
 		function postImgToImgur ( image ) {
 
-			// console.log( 'postImgToImgur image ', image );
-
 			var req = {
 				method: 'POST',
 				url: 'https://api.imgur.com/3/image',
@@ -91,20 +89,9 @@
 
 			
 			function imagePosted ( data ) {
-				// console.log( 'imagePosted ', data );
 				return data;
 			}
 
-			// return $http.post( 'https://api.imgur.com/3/image' )
-			// 	.then( imagePosted )
-			// 	.catch(function( message ){
-			// 		console.log( 'XHR Failed for readBeers ', message );
-			// 	});
-			// function imagePosted ( data ) {
-			// 	console.log( 'imagePosted ', data );
-			// 	return data;
-			// }
-		
 
 
 
