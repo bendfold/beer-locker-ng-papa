@@ -21,48 +21,56 @@ function beerForm() {
 	function linkFunc(scope, el, attr, ctrl) {
 		scope.vm.submitAction = attr.submitAction;
 
-		var fileinput = document.getElementById( 'fileInput' );
-		var fileDisplayArea = document.getElementById( 'fileDisplayArea' );
+		// var fileinput = document.getElementById( 'fileInput' );
+		// var fileDisplayArea = document.getElementById( 'fileDisplayArea' );
 
-		fileInput.addEventListener( 'change', function ( e ) {
+		// // console.log('fileinput ', fileinput );
+		// // console.log( 'typeof addEventListener ', typeof addEventListener );
 
-			var file = fileInput.files[0],
-				imageType = /image.*/;
+		// // fileInput.addEventListener( 'click', foo );
 
-			if ( file.type.match( imageType ) ) {
-				var reader = new FileReader();
-				reader.onloadend = function ( e ) {
+		// // function foo() {
+		// // 	console.log( 'foo fired ' );
+		// // }
 
-					var result = reader.result,
-						rawBase64;
+		// fileInput.addEventListener( 'change', function ( e ) {
+		// 	var file = fileInput.files[0],
+		// 		imageType = /image.*/;
+
+		// 	if ( file.type.match( imageType ) ) {
+		// 		var reader = new FileReader();
+		// 		reader.onloadend = function ( e ) {
+
+		// 			var result = reader.result,
+		// 				rawBase64;
 					
-					rawBase64 = result.replace( /^data:image\/(png|jpeg|gif);base64,/ , " ");
+		// 			rawBase64 = result.replace( /^data:image\/(png|jpeg|gif);base64,/ , " ");
 
-					ctrl.postImgToImgur( rawBase64 ).then(function( data ){
+		// 			ctrl.postImgToImgur( rawBase64 ).then(function( data ){
 						
-						// TODO - Sort all this out
+		// 				// TODO - Sort all this out
 					
-						console.log( 'Returned ++++++ ', data.data.data.link );
+		// 				console.log( 'Returned ++++++ ', data.data.data.link );
 
-						var img = new Image();
-						img.src = data.data.data.link;
+		// 				var img = new Image();
+		// 				img.src = data.data.data.link;
 
-						// Add the image to the page.
-						fileDisplayArea.appendChild(img);
+		// 				// Add the image to the page.
+		// 				fileDisplayArea.appendChild(img);
 					
-						// TODO - Sort all this out
+		// 				// TODO - Sort all this out
 					
-					});
+		// 			});
 
-				}
+		// 		}
 
-				reader.readAsDataURL( file );
+		// 		reader.readAsDataURL( file );
 			
-			}
+		// 	}
 			
-		});
+		// });
 
-	}
+	};
 }
 
 BeerFormListCtrl.$inject = ['$scope', 'beerCollectionService', 'dataservice'];
@@ -70,6 +78,7 @@ BeerFormListCtrl.$inject = ['$scope', 'beerCollectionService', 'dataservice'];
 function BeerFormListCtrl( $scope, beerCollectionService, dataservice ) {
 	var vm = this;
 	vm.postImgToImgur = dataservice.postImgToImgur;
+
 };
 
 

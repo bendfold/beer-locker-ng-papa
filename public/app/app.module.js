@@ -14,6 +14,7 @@
 		'app.beerlist',
 		'app.newbeer',
 		'app.beerform',
+		'app.imageupload',
 		'ngRoute',
 		'ui.router'
 	])
