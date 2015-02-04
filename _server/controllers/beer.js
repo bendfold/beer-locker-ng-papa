@@ -8,6 +8,7 @@ exports.postBeers = function (req, res) {
 
 	// Set the beer properties that came from the POST data
 	beer.name = req.body.name;
+	beer.imgUrl = req.body.imgUrl;
 	beer.type = req.body.type;
 	beer.quantity = req.body.quantity;
 	beer.abv = req.body.abv;
@@ -59,6 +60,7 @@ exports.putBeer = function (req, res) {
 		}
 		// Update the existing beer quantity
 		beer.name = req.body.name;
+		beer.imgUrl = req.body.imgUrl;
 		beer.type = req.body.type;
 		beer.quantity = req.body.quantity;
 		beer.abv = req.body.abv;

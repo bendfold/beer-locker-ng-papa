@@ -1,7 +1,8 @@
 ANGULAR TASKS
 ----------------------------
 * Added image upload (Ang + Node job).
-
+* Look at the naming of this model attr as its passed down
+* Remove console.logs from imageupload.tmpl.html
 * Form validation, quant & abv only to except numbers.
 * Get quanity increment / decrement hooked up to PUT service.
 * Add product filtering / search.

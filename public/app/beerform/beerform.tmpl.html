@@ -4,14 +4,15 @@
 		<li>
 			<label for="editName">Name:</label>
 			<input type="text" placeholder="Edit the beer name here" ng-model="model.name" />
+			MODEL : {{ model }}
+			BEER : {{ beer }}
 		</li>
 		<li>
-			<image-upload>
-<!-- 			<label for="imageUpload">Select an image file:</label>
-			<input type="file" id="fileInput" />
-			<div id="fileDisplayArea">
-				
-			</div> -->
+			<!-- 
+				Adding model here to pass through the beer model, its on the beerform parent as beer, but as its the second time we inherit it here we need to use the original attribute name.
+				TODO - Look at the naming of this model attr as its passed down
+			-->
+			<image-upload model="model">
 		</li>
 		<li>
 			<label for="editType">Type:</label>
