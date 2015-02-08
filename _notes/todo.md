@@ -1,12 +1,11 @@
 ANGULAR TASKS
 ----------------------------
 * Make sure the user can only upload one image, i.e. overwrite the old one
-* Look at the naming of this model attr as its passed down
-* Remove console.logs from imageupload.tmpl.html
 * Form validation, quant & abv only to except numbers.
 * Get quanity increment / decrement hooked up to PUT service.
 * Add product filtering / search.
 * Error handling
+* Look at the naming of this model attr as its passed down on attribute for second time
 
 
 CSS TASKS
