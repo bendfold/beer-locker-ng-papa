@@ -1,6 +1,5 @@
-<h1>beers are listed here yo!</h1>
-<!-- <h3> {{vm.beers}} </h3> -->
 
+<!-- >>>>>>> TODO TEMP STYLES <<<<<<<< -->
 <style type="text/css">
 	.edit-panel {
 		display: none;
@@ -9,9 +8,27 @@
 		display: block;
 	}
 </style>
+<!-- >>>>>>> TODO TEMP STYLES <<<<<<<< -->
+
+<!-- <div class="tool-bar">
+	<div class="search-filter">
+		<label for="searchFilter">
+			Search for your beer:
+		</label>
+		<input type="text" name="searchFilter" ng-model="query" />
+	</div>
+	<div class="sort-by-filter">
+		<label for="sortByFilter">
+			Sort by:
+		</label>
+		<select name="sortByFilter">
+			<option value=""></option>
+		</select>
+	</div>
+</div> -->
 
 <ul class="product-list">
-	<li data-ng-repeat="beer in vm.beers | filter:query | orderBy:orderProp" id="{{'beer_' + beer._id}}" >
+	<li data-ng-repeat="beer in vm.beers | filter : query | orderBy : orderProp" id="{{'beer_' + beer._id}}" >
 		<ul class="beer-tile">
 			<li data-ng-if="beer.imgUrl">
 				<img ng-src='{{beer.imgUrl}}' alt="" />

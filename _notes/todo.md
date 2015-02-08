@@ -1,16 +1,18 @@
 ANGULAR TASKS
 ----------------------------
-* Get quantity increment / decrement hooked up to PUT service.
+
 * Add product filtering / search.
 
 * Form validation, quant & abv only to except numbers.
 
 * Error handling
 * Look at the naming of this model attr as its passed down on attribute for second time
+* Add in image cropping module
 
 
 CSS TASKS
 ----------------------------
+* Get Stylus and Gulp going
 * Tidy Home page
 	- Make layout into panels
 	- Devise someway to hide & show the edit panel (click n flip?)

@@ -11,11 +11,21 @@
 		<link rel='stylesheet' href='./content/css/main.css'>
 	</head>
 	<body>
-
-	<!-- TODO Temp nav -->
-		<a ui-sref="beerlist">Beer list</a>
-		<a ui-sref="newbeer">Add new beer</a>
-	<!-- TODO Temp nav -->
+		<nav>
+			<ul class="main-nav">
+				<li>
+					<a ui-sref="beerlist">
+						Beer list
+					</a>
+				</li>
+				<li>
+					<a ui-sref="newbeer">
+						Add a new beer
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- View get loaded into the ui-view -->
 		<div ui-view></div>
 
 		<!--  ***** VENDOR SCRIPTS  ***** -->
