@@ -14,8 +14,14 @@
 		////////////
 
 		function activate() {
+			
+			console.log( 'ACTIVE FIRED ------ >>>>>>>>>> ++++++' );
+
 			return 	beerCollectionService.getBeers().then(function( data ){
 				vm.beers = data;
+				
+				console.log( 'vm.beers <<++++++++ ');
+
 				return vm.beers;
 			});
 		}

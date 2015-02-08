@@ -18,11 +18,11 @@ function imageUpload() {
 
 	function linkFunc(scope, element, attr, ctrl) {
 
-		console.log( 'scope.model +++++++++++++ ' , scope.model );
-		console.log( 'scope ' , scope );
-		console.log( 'element ', element );
-		console.log( 'attr ', attr );
-		console.log( 'ctrl ', ctrl );
+		// console.log( 'scope.model +++++++++++++ ' , scope.model );
+		// console.log( 'scope ' , scope );
+		// console.log( 'element ', element );
+		// console.log( 'attr ', attr );
+		// console.log( 'ctrl ', ctrl );
 		
 		var el = element[0],
 			fileInput = el.querySelector('.file-input'),
@@ -34,7 +34,7 @@ function imageUpload() {
 			var file = fileInput.files[0],
 				imageType = /image.*/;
 
-			console.log( 'scope.model >>>>>>>>>>>> ' , scope.model );
+			// console.log( 'scope.model >>>>>>>>>>>> ' , scope.model );
 
 			if ( file.type.match( imageType ) ) {
 
@@ -55,7 +55,7 @@ function imageUpload() {
 
 						scope.model.imgUrl = data.data.data.link;
 					
-						console.log( 'scope.model >>>>>>>>>>>> ' , scope.model );
+						// console.log( 'scope.model >>>>>>>>>>>> ' , scope.model );
 
 					});
 				}
@@ -73,5 +73,5 @@ function imageUploadCtrl ( $scope, beerCollectionService, dataservice ) {
 	var vm = this;
 	vm.postImgToImgur = dataservice.postImgToImgur;
 
-	console.log( 'vm ', vm );
+	// console.log( 'vm ', vm );
 }

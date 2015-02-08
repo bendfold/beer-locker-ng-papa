@@ -14,10 +14,7 @@
 	<li data-ng-repeat="beer in vm.beers | filter:query | orderBy:orderProp" id="{{'beer_' + beer._id}}" >
 		<ul class="beer-tile">
 			<li data-ng-if="beer.imgUrl">
-				<img src='{{beer.imgUrl}}' alt="" />
-			</li>
-			<li>
-				{{beer}}
+				<img ng-src='{{beer.imgUrl}}' alt="" />
 			</li>
 			<li data-ng-if="beer.name">
 				<p>Beer name: <a href="">{{beer.name}}</a></p>

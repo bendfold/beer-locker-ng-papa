@@ -60,7 +60,7 @@
 					console.log( 'XHR Failed for readBeers ', message );
 				});
 			function deleteBeerCompleted ( data ) {
-				console.log('deleteBeerCompleted data ', data );
+				// console.log('deleteBeerCompleted data ', data );
 				return data;
 			}
 		}
@@ -86,14 +86,9 @@
 				console.log( 'XHR Failed for postImgToImgur ', message );
 			});
 
-
-			
 			function imagePosted ( data ) {
 				return data;
 			}
-
-
-
 
 		}
 
