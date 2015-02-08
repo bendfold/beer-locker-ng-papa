@@ -10,7 +10,7 @@
 </style>
 <!-- >>>>>>> TODO TEMP STYLES <<<<<<<< -->
 
-<!-- <div class="tool-bar">
+<div class="tool-bar">
 	<div class="search-filter">
 		<label for="searchFilter">
 			Search for your beer:
@@ -21,11 +21,13 @@
 		<label for="sortByFilter">
 			Sort by:
 		</label>
-		<select name="sortByFilter">
-			<option value=""></option>
+		<select name="sortByFilter" ng-model="orderProp">
+			<option value="name">Name</option>
+			<option value="type">Type</option>
+			<option value="origin">Origin</option>
 		</select>
 	</div>
-</div> -->
+</div>
 
 <ul class="product-list">
 	<li data-ng-repeat="beer in vm.beers | filter : query | orderBy : orderProp" id="{{'beer_' + beer._id}}" >

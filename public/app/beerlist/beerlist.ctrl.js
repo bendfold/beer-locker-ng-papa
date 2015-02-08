@@ -21,7 +21,9 @@
 				vm.beers = data;
 				
 				console.log( 'vm.beers <<++++++++ ');
-
+				// Set filter deafult
+				$scope.orderProp = 'name';
+				// Add beers to scope
 				return vm.beers;
 			});
 		}
