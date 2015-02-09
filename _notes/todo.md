@@ -1,14 +1,13 @@
 ANGULAR TASKS
 ----------------------------
 
-* Add product filtering / search.
-
 * Form validation, quant & abv only to except numbers.
 
 * Error handling
+
 * Look at the naming of this model attr as its passed down on attribute for second time
 * Add in image cropping module
-
+* Add in tests
 
 CSS TASKS
 ----------------------------
