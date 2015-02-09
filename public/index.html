@@ -7,25 +7,31 @@
 		<meta name='description' content=''>
 		<meta name='viewport' content='width=device-width, initial-scale=1'>
 		<!-- Latest compiled and minified CSS -->
+		<link rel='stylesheet' href='./css/bootstrap.min.css'>
 		<link rel='stylesheet' href='./css/main.css'>
 	</head>
 	<body>
-		<nav>
-			<ul class="main-nav">
-				<li>
-					<a ui-sref="beerlist">
-						Beer list
-					</a>
-				</li>
-				<li>
-					<a ui-sref="newbeer">
-						Add a new beer
-					</a>
-				</li>
-			</ul>
-		</nav>
-		<!-- View get loaded into the ui-view -->
-		<div ui-view></div>
+		<div class="wrapper">
+			
+			<nav class="collapse navbar-collapse row">
+				<ul class="nav navbar-nav">
+					<li>
+						<a ui-sref="beerlist">
+							Beer list
+						</a>
+					</li>
+					<li>
+						<a ui-sref="newbeer">
+							Add a new beer
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<!-- View get loaded into the ui-view -->
+			<div ui-view></div>
+
+		</div>
 
 		<!--  ***** VENDOR SCRIPTS  ***** -->
 		<!-- Angular -->
