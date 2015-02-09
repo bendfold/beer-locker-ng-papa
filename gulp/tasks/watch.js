@@ -14,6 +14,6 @@ module.exports = function(){
 
 	gulp.watch('src/js/**/*.js', ['scripts']);
 	gulp.watch('src/stylus/**', ['stylus']);
-	gulp.watch('src/assets/images/**/*.{jpg,png}', ['stylus']);
+	gulp.watch('src/assets/images/**/*.{jpg,png}', ['images']);
 	livereload();
 };
