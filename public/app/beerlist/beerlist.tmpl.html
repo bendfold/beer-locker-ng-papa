@@ -1,16 +1,5 @@
 
-<!-- >>>>>>> TODO TEMP STYLES <<<<<<<< -->
-<style type="text/css">
-	.edit-panel {
-		display: none;
-	}
-	.edit-mode .edit-panel {
-		display: block;
-	}
-</style>
-<!-- >>>>>>> TODO TEMP STYLES <<<<<<<< -->
-
-<div class="tool-bar">
+<!-- <div class="tool-bar">
 	<div class="search-filter">
 		<label for="searchFilter">
 			Search for your beer:
@@ -27,7 +16,32 @@
 			<option value="origin">Origin</option>
 		</select>
 	</div>
-</div>
+</div> -->
+
+
+<nav class="collapse navbar-collapse">
+	<div class="container-fluid">
+		<form class="navbar-form navbar-right">
+			<div class="form-group" role="search">
+				<label for="searchFilter">
+					Search for your beer:
+				</label>
+				<input type="text" name="searchFilter" ng-model="query" class="form-control" />
+			</div>
+			<div class="form-group" role="filter">
+				<label for="sortByFilter">
+					Sort by:
+				</label>
+				<select name="sortByFilter" ng-model="orderProp">
+					<option value="name">Name</option>
+					<option value="type">Type</option>
+					<option value="origin">Origin</option>
+				</select>
+			</div>
+		</form>
+	</div>
+</nav>
+
 
 <ul class="product-list">
 	<li data-ng-repeat="beer in vm.beers | filter : query | orderBy : orderProp" id="{{'beer_' + beer._id}}" >

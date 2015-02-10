@@ -3,7 +3,7 @@
 	<head>
 		<meta charset='utf-8'>
 		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
-		<title>Papa-locker</title>
+		<title>Beer Locker :: ng-papa</title>
 		<meta name='description' content=''>
 		<meta name='viewport' content='width=device-width, initial-scale=1'>
 		<!-- Latest compiled and minified CSS -->
@@ -13,19 +13,24 @@
 	<body>
 		<div class="wrapper">
 			
-			<nav class="collapse navbar-collapse row">
-				<ul class="nav navbar-nav">
-					<li>
-						<a ui-sref="beerlist">
-							Beer list
-						</a>
-					</li>
-					<li>
-						<a ui-sref="newbeer">
-							Add a new beer
-						</a>
-					</li>
-				</ul>
+			<nav class="collapse navbar-collapse">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<h1 class="navbar-brand">Beer Locker :: ng-papa</h1>
+					</div>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a ui-sref="beerlist">
+								Beer list
+							</a>
+						</li>
+						<li>
+							<a ui-sref="newbeer">
+								Add a new beer
+							</a>
+						</li>
+					</ul>
+				</div>
 			</nav>
 
 			<!-- View get loaded into the ui-view -->
