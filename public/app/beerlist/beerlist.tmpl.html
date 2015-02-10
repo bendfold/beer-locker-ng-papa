@@ -32,7 +32,7 @@
 				<label for="sortByFilter">
 					Sort by:
 				</label>
-				<select name="sortByFilter" ng-model="orderProp">
+				<select name="sortByFilter" ng-model="orderProp" class="form-control">
 					<option value="name">Name</option>
 					<option value="type">Type</option>
 					<option value="origin">Origin</option>
@@ -44,7 +44,7 @@
 
 
 <ul class="product-list">
-	<li data-ng-repeat="beer in vm.beers | filter : query | orderBy : orderProp" id="{{'beer_' + beer._id}}" >
+	<li data-ng-repeat="beer in vm.beers | filter : query | orderBy : orderProp" id="{{'beer_' + beer._id}}" class="">
 		<ul class="beer-tile">
 			<li data-ng-if="beer.imgUrl">
 				<img ng-src='{{beer.imgUrl}}' alt="" />
