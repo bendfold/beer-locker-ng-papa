@@ -1,33 +1,14 @@
-
-<!-- <div class="tool-bar">
-	<div class="search-filter">
-		<label for="searchFilter">
-			Search for your beer:
-		</label>
-		<input type="text" name="searchFilter" ng-model="query" />
-	</div>
-	<div class="sort-by-filter">
-		<label for="sortByFilter">
-			Sort by:
-		</label>
-		<select name="sortByFilter" ng-model="orderProp">
-			<option value="name">Name</option>
-			<option value="type">Type</option>
-			<option value="origin">Origin</option>
-		</select>
-	</div>
-</div> -->
-
-
 <nav class="collapse navbar-collapse">
 	<div class="container-fluid">
-		<form class="navbar-form navbar-right">
+		<div class="navbar-form navbar-left">
 			<div class="form-group" role="search">
 				<label for="searchFilter">
 					Search for your beer:
 				</label>
 				<input type="text" name="searchFilter" ng-model="query" class="form-control" />
 			</div>
+		</div>
+		<div class="navbar-form navbar-right">
 			<div class="form-group" role="filter">
 				<label for="sortByFilter">
 					Sort by:
@@ -38,46 +19,47 @@
 					<option value="origin">Origin</option>
 				</select>
 			</div>
-		</form>
+		</div>
 	</div>
 </nav>
 
-
-<ul class="product-list">
-	<li data-ng-repeat="beer in vm.beers | filter : query | orderBy : orderProp" id="{{'beer_' + beer._id}}" class="">
-		<ul class="beer-tile">
-			<li data-ng-if="beer.imgUrl">
-				<img ng-src='{{beer.imgUrl}}' alt="" />
-			</li>
-			<li data-ng-if="beer.name">
-				<p>Beer name: <a href="">{{beer.name}}</a></p>
-			</li>
-			<li data-ng-if="beer.type">
-				<p>Beer type: <a href="">{{beer.type}}</a></p>
-			</li>
-			<li data-ng-if="beer.quantity">
-				<p>Currently in stock: {{beer.quantity}}</p>
-			</li>
-			<li data-ng-if="beer.abv">
-				<p>ABV: {{beer.abv}}%</p>
-			</li> 
-			<li data-ng-if="beer.origin">
-				<p>Country of origin: {{beer.origin}}</p>
-			</li>
-			<li data-ng-if="beer.details">
-				<p>Beer details: {{beer.details}}</p>
-			</li>
-			<li class="edit-beer">
-				<p>
-					<a action-button="toggleEditPanel">EDIT</a>
-				</p>
-				<beer-form submit-action="putBeer" model="beer"></beer-form>
-			</li>
-			<li class="delete-beer">
-				<p>
-					<a action-button="deleteBeer">DELETE</a>
-				</p>
-			</li>
-		</ul>
-	</li>
-</ul>
+<div class="container-fluid">
+	<ul class="product-list row">
+		<li data-ng-repeat="beer in vm.beers | filter : query | orderBy : orderProp" id="{{'beer_' + beer._id}}" class="col-md-4">
+			<ul class="beer-tile">
+				<li data-ng-if="beer.imgUrl">
+					<img ng-src='{{beer.imgUrl}}' alt="" />
+				</li>
+				<li data-ng-if="beer.name">
+					<p>Beer name: <a href="">{{beer.name}}</a></p>
+				</li>
+				<li data-ng-if="beer.type">
+					<p>Beer type: <a href="">{{beer.type}}</a></p>
+				</li>
+				<li data-ng-if="beer.quantity">
+					<p>Currently in stock: {{beer.quantity}}</p>
+				</li>
+				<li data-ng-if="beer.abv">
+					<p>ABV: {{beer.abv}}%</p>
+				</li> 
+				<li data-ng-if="beer.origin">
+					<p>Country of origin: {{beer.origin}}</p>
+				</li>
+				<li data-ng-if="beer.details">
+					<p>Beer details: {{beer.details}}</p>
+				</li>
+				<li class="edit-beer">
+					<p>
+						<a action-button="toggleEditPanel">EDIT</a>
+					</p>
+					<beer-form submit-action="putBeer" model="beer"></beer-form>
+				</li>
+				<li class="delete-beer">
+					<p>
+						<a action-button="deleteBeer">DELETE</a>
+					</p>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
