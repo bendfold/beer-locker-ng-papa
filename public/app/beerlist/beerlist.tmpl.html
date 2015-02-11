@@ -3,7 +3,7 @@
 		<div class="navbar-form navbar-left">
 			<div class="form-group" role="search">
 				<label for="searchFilter">
-					Search for your beer:
+					Search:
 				</label>
 				<input type="text" name="searchFilter" ng-model="query" class="form-control" />
 			</div>
@@ -11,7 +11,7 @@
 		<div class="navbar-form navbar-right">
 			<div class="form-group" role="filter">
 				<label for="sortByFilter">
-					Sort by:
+					Sort:
 				</label>
 				<select name="sortByFilter" ng-model="orderProp" class="form-control">
 					<option value="name">Name</option>
@@ -28,7 +28,9 @@
 		<li data-ng-repeat="beer in vm.beers | filter : query | orderBy : orderProp" id="{{'beer_' + beer._id}}" class="col-md-4">
 			<ul class="beer-tile">
 				<li data-ng-if="beer.imgUrl">
-					<img ng-src='{{beer.imgUrl}}' alt="" />
+					<!-- <img ng-src='{{beer.imgUrl}}' style="background-image: {{beer.imgUrl}};" alt="" /> -->
+					<div style="background-image: url( {{ beer.imgUrl }} ) " alt="" class="beer-logo" >
+					</div>
 				</li>
 				<li data-ng-if="beer.name">
 					<p>Beer name: <a href="">{{beer.name}}</a></p>
@@ -50,13 +52,13 @@
 				</li>
 				<li class="edit-beer">
 					<p>
-						<a action-button="toggleEditPanel">EDIT</a>
+						<a action-button="toggleEditPanel" class="btn btn-default">EDIT</a>
 					</p>
 					<beer-form submit-action="putBeer" model="beer"></beer-form>
 				</li>
 				<li class="delete-beer">
 					<p>
-						<a action-button="deleteBeer">DELETE</a>
+						<a action-button="deleteBeer" class="btn btn-danger">DELETE</a>
 					</p>
 				</li>
 			</ul>
