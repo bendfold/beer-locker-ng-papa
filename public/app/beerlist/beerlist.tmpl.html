@@ -62,19 +62,19 @@
 						Beer details: <span class="item-hero">{{beer.details}}</span>
 					</p>
 				</li>
-				<li>
-					<ul class="tile-tools">
+				<li class="tile-tools">
+					<ul class="tile-tool-list">
 						<li class="edit-beer list-item list-icon list-icon-edit">
 							<p>
 								<!-- <a action-button="toggleEditPanel" class="btn btn-default">EDIT</a> -->
-								<a action-button="toggleEditPanel" class="icon-mode-edit"></a>
+								<a action-button="toggleEditPanel" class="icon icon-mode-edit"></a>
 							</p>
 							<beer-form submit-action="putBeer" model="beer"></beer-form>
 						</li>
 						<li class="delete-beer list-item list-icon list-icon-delete">
 							<p>
 								<!-- <a action-button="deleteBeer" class="btn btn-danger">DELETE</a> -->
-								<a action-button="deleteBeer" class="icon-delete"></a>
+								<a action-button="deleteBeer" class="icon icon-delete"></a>
 							</p>
 						</li>
 					</ul>

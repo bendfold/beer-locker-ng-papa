@@ -25,11 +25,37 @@
 	.list-item
 		display block
 		margin 0 0 10px 0
+		p
+			font-size 1.6rem
 		
 	.item-hero
 		color $item-hero
 		
+	.tile-tools
+		position absolute
+		top 0
+		left 0
+		width 100%
+		
+	.tile-tool-list
+		width 100%
+		position relative
+
 	.list-icon
 		position absolute
-		bottom 0
-		left 0
+		top 10px
+		a.icon
+			font-size 3rem
+	
+		&.list-icon-edit
+			left 30px
+		&.list-icon-delete
+			right 30px
+		&:hover
+			cursor pointer
+			text-decoration none
+
+
+	// .tile-tools
+	// 	background-color red
+	// 	width 100%
