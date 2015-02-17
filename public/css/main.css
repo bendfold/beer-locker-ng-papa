@@ -5,7 +5,7 @@
 
 /* line 13 : /Users/owencowdry/development/_playground/papa_locker/node_modules/gulp-stylus/node_modules/stylus/lib/functions/index.styl */
 
-/* line 16 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/index.styl */
+/* line 216 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/index.styl */
 
 /* line 10 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/index.styl */
 
@@ -25,7 +25,7 @@
 
 /* line 90 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/flex.styl */
 
-/* line 16 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/gradients.styl */
+/* line 216 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/gradients.styl */
 
 /* line 11 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/gradients.styl */
 
@@ -53,7 +53,7 @@
 
 /* line 5 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/reset.styl */
 
-/* line 16 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/text/index.styl */
+/* line 216 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/text/index.styl */
 
 /* line 12 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/text/index.styl */
 
@@ -113,13 +113,13 @@ html{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-
 input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
 /* line 66 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/reset.styl */
 input[type=number]{-moz-appearance:textfield}
-/* line 10 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/reset.styl */
+/* line 12 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/reset.styl */
 
 /* line 2 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/colours.styl */
 
 /* line 4 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/colours.styl */
 
-/* line 68 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/core-layout.styl */
+/* line 12 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/core-layout.styl */
 
 /* line 1 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/core-layout.styl */
 .wrapper{width:1200px;margin:0 auto;padding:0}
@@ -129,13 +129,215 @@ input[type=number]{-moz-appearance:textfield}
 
 /* line 1 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/typography.styl */
 .body{font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;font-weight:300}
-/* line 3 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/typography.styl */
+/* line 216 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/typography.styl */
 
-/* line 3 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/header.styl */
+/* line 1 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+@font-face{font-family:'icomoon';src:url("../icons/fonts/icomoon.eot?9g7066");src:url("../icons/fonts/icomoon.eot?#iefix9g7066") format('embedded-opentype'),url("../icons/fonts/icomoon.woff?9g7066") format('woff'),url("../icons/fonts/icomoon.ttf?9g7066") format('truetype'),url("../icons/fonts/icomoon.svg?9g7066#icomoon") format('svg');font-weight:normal;font-style:normal}
+/* line 11 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+[class^="icon-"],[class*=" icon-"]{font-family:'icomoon';speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+/* line 22 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 23 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-bookmark:before{content:"\e600"}
+/* line 26 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 27 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-bookmark-outline:before{content:"\e601"}
+/* line 30 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 31 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-cached:before{content:"\e602"}
+/* line 34 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 35 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-delete:before{content:"\e603"}
+/* line 38 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 39 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-done:before{content:"\e604"}
+/* line 42 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 43 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-favorite:before{content:"\e605"}
+/* line 46 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 47 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-favorite-outline:before{content:"\e606"}
+/* line 50 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 51 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-grade:before{content:"\e607"}
+/* line 54 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 55 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-info:before{content:"\e608"}
+/* line 58 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 59 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-info-outline:before{content:"\e609"}
+/* line 62 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 63 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-replay:before{content:"\e60a"}
+/* line 66 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 67 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-call:before{content:"\e60b"}
+/* line 70 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 71 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-add-box:before{content:"\e60c"}
+/* line 74 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 75 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-add-circle:before{content:"\e60d"}
+/* line 78 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 79 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-add-circle-outline:before{content:"\e60e"}
+/* line 82 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 83 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-clear:before{content:"\e60f"}
+/* line 86 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 87 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-remove:before{content:"\e610"}
+/* line 90 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 91 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-remove-circle:before{content:"\e611"}
+/* line 94 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 95 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-remove-circle-outline:before{content:"\e612"}
+/* line 98 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 99 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-insert-drive-file:before{content:"\e62f"}
+/* line 102 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 103 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-mode-edit:before{content:"\e630"}
+/* line 106 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 107 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-remove-red-eye:before{content:"\e613"}
+/* line 110 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 111 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-tag-faces:before{content:"\e614"}
+/* line 114 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 115 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-texture:before{content:"\e615"}
+/* line 118 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 119 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-timer-auto:before{content:"\e616"}
+/* line 122 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 123 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-apps:before{content:"\e617"}
+/* line 126 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 127 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-arrow-back:before{content:"\e618"}
+/* line 130 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 131 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-arrow-forward:before{content:"\e619"}
+/* line 134 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 135 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-cancel:before{content:"\e61a"}
+/* line 138 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 139 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-check:before{content:"\e61b"}
+/* line 142 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 143 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-chevron-left:before{content:"\e61c"}
+/* line 146 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 147 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-chevron-right:before{content:"\e61d"}
+/* line 150 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 151 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-close:before{content:"\e61e"}
+/* line 154 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 155 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-expand-less:before{content:"\e61f"}
+/* line 158 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 159 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-expand-more:before{content:"\e620"}
+/* line 162 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 163 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-refresh:before{content:"\e621"}
+/* line 166 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 167 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-dnd-forwardslash:before{content:"\e622"}
+/* line 170 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 171 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-do-not-disturb:before{content:"\e623"}
+/* line 174 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 175 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-people:before{content:"\e624"}
+/* line 178 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 179 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-people-outline:before{content:"\e625"}
+/* line 182 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 183 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-person:before{content:"\e626"}
+/* line 186 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 187 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-person-add:before{content:"\e627"}
+/* line 190 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 191 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-person-outline:before{content:"\e628"}
+/* line 194 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 195 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-check-box:before{content:"\e629"}
+/* line 198 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 199 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-check-box-outline-blank:before{content:"\e62a"}
+/* line 202 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 203 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-radio-button-off:before{content:"\e62b"}
+/* line 206 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 207 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-radio-button-on:before{content:"\e62c"}
+/* line 210 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 211 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-star:before{content:"\e62d"}
+/* line 214 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 215 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+.icon-star-outline:before{content:"\e62e"}
+/* line 216 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/icons.styl */
+
+/* line 216 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/header.styl */
 
 /* line 8 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/header.styl */
 
-/* line 3 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/edit-panel.styl */
+/* line 216 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/edit-panel.styl */
 
 /* line 1 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/edit-panel.styl */
 
@@ -159,7 +361,7 @@ input[type=number]{-moz-appearance:textfield}
 .main-nav .navbar-brand{color:#2196f3;padding-left:0}
 /* line 13 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/main-nav.styl */
 
-/* line 12 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beerlist-tools.styl */
+/* line 6 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beerlist-tools.styl */
 
 /* line 1 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beerlist-tools.styl */
 .beer-tools{margin:0 0 20px 0;background-color:#eee;border-top:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;padding:0 40px 0 22px;}
@@ -167,11 +369,19 @@ input[type=number]{-moz-appearance:textfield}
 .beer-tools .tool-label{margin-right:15px}
 /* line 9 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beerlist-tools.styl */
 .beer-tools .sort-select{-webkit-box-shadow:none;box-shadow:none;border:1px solid #dedede;padding:0 23px 0 10px;background-position-x:90%}
-/* line 16 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beerlist-tools.styl */
+/* line 35 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beerlist-tools.styl */
 
-/* line 10 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-tile.styl */
+/* line 13 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-tile.styl */
 
 /* line 1 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-tile.styl */
-.beer-tile{border:1px solid #dadada;-webkit-border-radius:10px;border-radius:10px;padding:10px;margin:0 0 15px 0;background-color:#eee;}
-/* line 8 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-tile.styl */
-.beer-tile .beer-logo{display:block;width:200px;height:200px;margin:0 auto;padding:0;background-repeat:no-repeat;background-position:0 0;-webkit-background-size:contain;-moz-background-size:contain;background-size:contain}
+.beer-item-parent{position:relative}
+/* line 4 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-tile.styl */
+.beer-tile{border:1px solid #dadada;-webkit-border-radius:10px;border-radius:10px;padding:10px;margin:0 0 15px 0;background-color:#eee;height:310px;overflow-x:hidden;overflow-y:scroll;}
+/* line 15 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-tile.styl */
+.beer-tile .beer-logo{display:block;width:200px;height:200px;margin:0 auto;padding:0;background-repeat:no-repeat;background-position:center center;-webkit-background-size:contain;-moz-background-size:contain;background-size:contain}
+/* line 25 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-tile.styl */
+.beer-tile .list-item{display:block;margin:0 0 10px 0}
+/* line 29 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-tile.styl */
+.beer-tile .item-hero{color:#2196f3}
+/* line 32 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-tile.styl */
+.beer-tile .list-icon{position:absolute;bottom:0;left:0}

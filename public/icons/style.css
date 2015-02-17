@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot?-imjwiq');
-	src:url('fonts/icomoon.eot?#iefix-imjwiq') format('embedded-opentype'),
-		url('fonts/icomoon.woff?-imjwiq') format('woff'),
-		url('fonts/icomoon.ttf?-imjwiq') format('truetype'),
-		url('fonts/icomoon.svg?-imjwiq#icomoon') format('svg');
+	src:url('fonts/icomoon.eot?9g7066');
+	src:url('fonts/icomoon.eot?#iefix9g7066') format('embedded-opentype'),
+		url('fonts/icomoon.woff?9g7066') format('woff'),
+		url('fonts/icomoon.ttf?9g7066') format('truetype'),
+		url('fonts/icomoon.svg?9g7066#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -97,6 +97,14 @@
 
 .icon-remove-circle-outline:before {
 	content: "\e612";
+}
+
+.icon-insert-drive-file:before {
+	content: "\e62f";
+}
+
+.icon-mode-edit:before {
+	content: "\e630";
 }
 
 .icon-remove-red-eye:before {

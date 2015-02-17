@@ -1,9 +1,16 @@
+.beer-item-parent
+	position relative
+
 .beer-tile
 	border 1px solid #dadada
 	border-radius 10px
 	padding 10px
 	margin 0 0 15px 0
 	background-color $tile-bgnd
+	height 310px
+	overflow-x hidden
+	overflow-y scroll
+	
 	
 	.beer-logo
 		display block
@@ -12,5 +19,17 @@
 		margin 0 auto
 		padding 0
 		background-repeat no-repeat
-		background-position 0 0
+		background-position center center
 		background-size contain
+	
+	.list-item
+		display block
+		margin 0 0 10px 0
+		
+	.item-hero
+		color $item-hero
+		
+	.list-icon
+		position absolute
+		bottom 0
+		left 0
