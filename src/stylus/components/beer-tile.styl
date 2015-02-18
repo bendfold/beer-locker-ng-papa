@@ -1,5 +1,14 @@
 .beer-item-parent
 	position relative
+	
+	transform-style: preserve-3d;
+	height 310px
+	perspective: 1000px;
+
+.beer-item-inner
+	display block 
+	width 100%
+	position relative
 
 .beer-tile
 	border 1px solid #dadada
@@ -16,7 +25,7 @@
 		display block
 		width 200px
 		height 200px
-		margin 0 auto
+		margin 30px auto
 		padding 0
 		background-repeat no-repeat
 		background-position center center
@@ -56,6 +65,42 @@
 			text-decoration none
 
 
-	// .tile-tools
-	// 	background-color red
-	// 	width 100%
+
+
+.flip-card-side-a,
+.flip-card-side-b {
+	width: 100%;
+	position: absolute;
+	height: 300px;
+	backface-visibility: hidden;
+	transform-origin: 50% 50%;
+	transition: all .5s ease-in-out;
+}
+
+.flip-card-side-a {
+	transform: rotateY(0deg) translateZ(100px);
+	z-index: 1;
+}
+.flip-card-side-b {
+	transform: rotateY(90deg) translateZ(100px);
+}
+
+.flip .flip-card-side-a {
+	transform: rotateY(-90deg) translateZ(100px);
+}
+.flip .flip-card-side-b {
+	transform: rotateY(0deg) translateZ(100px);
+	z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+

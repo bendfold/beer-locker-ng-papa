@@ -18,6 +18,7 @@
 				vm.beers = data;
 				// Set filter deafult
 				$scope.orderProp = 'name';
+
 				// Add beers to scope
 				return vm.beers;
 			});
@@ -29,8 +30,14 @@
 		});
 
 		$scope.$on( 'toggleEditPanel', function ( evt, args ) {
+
 			var beerListItem = document.getElementById( 'beer_' + args[0] );
-			beerListItem.classList.toggle( 'edit-mode' );
+			beerListItem.classList.toggle( 'flip' );
+			
+			console.log('toggleEditPanel ',  beerListItem );
+
+			// var beerListItem = document.getElementById( 'beer_' + args[0] );
+			// beerListItem.classList.toggle( 'edit-mode' );
 		});
 
 		$scope.$on( 'putBeer', function ( evt, args ) {
