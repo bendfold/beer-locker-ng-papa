@@ -14,7 +14,7 @@
 		
 		function linkFunc ( scope, el, attr, ctrl ) {
 			el.on('click', function( evt ){
-				var actionChecklist = [ 'toggleEditPanel', 'deleteBeer', 'putBeer', 'postBeer' ],
+				var actionChecklist = [ 'toggleEditPanel', 'toggleInfoPanel', 'deleteBeer', 'putBeer', 'postBeer' ],
 					action,
 					beer_id;
 
@@ -49,6 +49,9 @@
 		}
 		$scope.toggleEditPanel = function ( args ) {
 			$rootScope.$broadcast( 'toggleEditPanel', args );
+		}
+		$scope.toggleInfoPanel = function ( args ) {
+			$rootScope.$broadcast( 'toggleInfoPanel', args );
 		}
 		$scope.putBeer = function ( args ) {
 			$rootScope.$broadcast( 'putBeer', args );

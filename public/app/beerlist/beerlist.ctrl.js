@@ -32,9 +32,20 @@
 		$scope.$on( 'toggleEditPanel', function ( evt, args ) {
 
 			var beerListItem = document.getElementById( 'beer_' + args[0] );
-			beerListItem.classList.toggle( 'flip' );
+			beerListItem.classList.toggle( 'flip-left' );
 			
 			console.log('toggleEditPanel ',  beerListItem );
+
+			// var beerListItem = document.getElementById( 'beer_' + args[0] );
+			// beerListItem.classList.toggle( 'edit-mode' );
+		});
+
+		$scope.$on( 'toggleInfoPanel', function ( evt, args ) {
+
+			var beerListItem = document.getElementById( 'beer_' + args[0] );
+			beerListItem.classList.toggle( 'flip-right' );
+			
+			console.log('toggleInfoPanel ',  beerListItem );
 
 			// var beerListItem = document.getElementById( 'beer_' + args[0] );
 			// beerListItem.classList.toggle( 'edit-mode' );

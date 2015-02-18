@@ -7,7 +7,8 @@
 
 .beer-item-inner
 	display block 
-	width 100%
+	width 95%
+	height 300px
 	position relative
 
 .beer-tile
@@ -16,7 +17,7 @@
 	padding 10px
 	margin 0 0 15px 0
 	background-color $tile-bgnd
-	height 310px
+	height 260px
 	overflow-x hidden
 	overflow-y scroll
 	
@@ -68,7 +69,8 @@
 
 
 .flip-card-side-a,
-.flip-card-side-b {
+.flip-card-side-b, 
+.flip-card-side-c {
 	width: 100%;
 	position: absolute;
 	height: 300px;
@@ -84,13 +86,32 @@
 .flip-card-side-b {
 	transform: rotateY(90deg) translateZ(100px);
 }
+.flip-card-side-c {
+	transform: rotateY(-90deg) translateZ(100px);
+	background-color rgba(0, 0, 255, 0.6)
+}
 
-.flip .flip-card-side-a {
+.flip-left .flip-card-side-a {
 	transform: rotateY(-90deg) translateZ(100px);
 }
-.flip .flip-card-side-b {
+.flip-left .flip-card-side-b {
 	transform: rotateY(0deg) translateZ(100px);
 	z-index: 1;
+}
+.flip-left .flip-card-side-c {
+	transform: rotateY(-180deg) translateZ(100px);
+}
+
+
+.flip-right .flip-card-side-a {
+	transform: rotateY(90deg) translateZ(100px);
+}
+.flip-right .flip-card-side-b {
+	transform: rotateY(180deg) translateZ(100px);
+	z-index: 1;
+}
+.flip-right .flip-card-side-c {
+	transform: rotateY(0deg) translateZ(100px);
 }
 
 

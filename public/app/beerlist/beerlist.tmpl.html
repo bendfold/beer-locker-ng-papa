@@ -23,11 +23,60 @@
 	</div>
 </nav>
 
-<div class="container-fluid">
+<div class="beer-list container-fluid clearfix">
 	<ul class="product-list row">
 		<li data-ng-repeat="beer in vm.beers | filter : query | orderBy : orderProp" id="{{'beer_' + beer._id}}" class="col-md-3 beer-item-parent">
-			<!-- NOTE Annoyingly had to add this as the widths were being calculated weirdly due to the float & position on the container -->
 			<ul class="beer-item-inner">
+				<li class="beer-tile flip-card-side-a">
+				
+					<div class="tile-tools tile-tools-top">
+						<ul class="tile-tool-list">
+							<li class="edit-beer list-item list-icon list-icon-edit">
+								<p>
+									<a action-button="toggleEditPanel" class="icon icon-mode-edit"></a>
+								</p>
+								<h1 style="font-size: 20px; color: green; background-color: red;">I'M SIDE A</h1>
+							</li>
+							<li class="edit-beer list-item list-icon list-icon-info">
+								<p>
+									<a action-button="toggleInfoPanel" class="icon icon-info-outline"></a>
+								</p>
+							</li>
+						</ul>
+					</div>
+				
+				</li>
+				<li class="beer-tile flip-card-side-b">
+					
+					<div class="tile-tools tile-tools-top">
+						<ul class="tile-tool-list">
+							<li class="edit-beer list-item list-icon list-icon-edit">
+								<p>
+									<a action-button="toggleEditPanel" class="icon icon-mode-edit"></a>
+								</p>
+								<h1 style="font-size: 20px; color: red; background-color: green;">I'M SIDE B</h1>
+							</li>
+						</ul>
+					</div>
+
+				</li>
+				<li class="beer-tile flip-card-side-c">
+
+					<div class="tile-tools tile-tools-top">
+						<ul class="tile-tool-list">
+							<li class="edit-beer list-item list-icon list-icon-info">
+								<p>
+									<a action-button="toggleInfoPanel" class="icon icon-info-outline"></a>
+								</p>
+								<h1 style="font-size: 20px; color: red; background-color: green;">I'M SIDE C</h1>
+							</li>
+						</ul>
+					</div>
+
+				</li>
+			</ul>
+			<!-- NOTE Annoyingly had to add this as the widths were being calculated weirdly due to the float & position on the container -->
+			<!-- <ul class="beer-item-inner">
 				<li class="tile-wrap">
 					<ul class="beer-tile flip-card-side-a">
 						 
@@ -98,7 +147,7 @@
 						</li>
 					</ul>
 				</li>
-			</ul>
+			</ul> -->
 			
 			<!-- <ul class="beer-tile flip-card-side-a">
 				 
