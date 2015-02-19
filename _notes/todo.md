@@ -1,6 +1,7 @@
 ANGULAR TASKS
 ----------------------------
-
+* Add + beer panel
+* Add default image, only once add new beer is clicked, if there is no image specified
 * Form validation, quant & abv only to except numbers.
 
 * Error handling
@@ -11,10 +12,8 @@ ANGULAR TASKS
 
 CSS TASKS
 ----------------------------
-* Get Stylus and Gulp going
-* Tidy Home page
-	- Make layout into panels
-	- Devise someway to hide & show the edit panel (click n flip?)
+* Make :before / :after line a mixin
+* Style beer form
 * Tidy new beer page
 	- Unify form style with edit panel
 	- Slick way to trasnition to the new beer panel? 
