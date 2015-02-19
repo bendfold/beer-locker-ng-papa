@@ -27,247 +27,98 @@
 	<ul class="product-list row">
 		<li data-ng-repeat="beer in vm.beers | filter : query | orderBy : orderProp" id="{{'beer_' + beer._id}}" class="col-md-3 beer-item-parent">
 			<ul class="beer-item-inner">
+				<!-- MAIN PANEL -->
 				<li class="beer-tile flip-card-side-a">
-				
 					<div class="tile-tools tile-tools-top">
 						<ul class="tile-tool-list">
-							<li class="edit-beer list-item trigger edit-trigger">
+							<li class="list-item trigger trigger-edit">
 								<p>
 									<a action-button="toggleEditPanel" class="icon icon-mode-edit"></a>
 								</p>
-							
-								<!-- <h1 style="font-size: 20px; color: green; background-color: red;">I'M SIDE A</h1> -->
-							
 							</li>
-							<li class="edit-beer list-item trigger info-trigger">
+							<li class="list-item trigger trigger-info">
 								<p>
 									<a action-button="toggleInfoPanel" class="icon icon-info-outline"></a>
 								</p>
 							</li>
 						</ul>
 					</div>
-					<div class="content">
+					<div class="tile-content">
 						<div style="background-image: url( {{ beer.imgUrl }} ) " alt="" class="beer-logo" >
 						</div>
 					</div>
 					<div class="tile-tools tile-tools-bottom">
 						<ul class="tile-tool-list">
-							<li class="delete-beer list-item trigger delete-trigger">
+							<li class="list-item trigger trigger-delete">
 								<p>
 									<a action-button="deleteBeer" class="icon icon-delete"></a>
 								</p>
 							</li>
 						</ul>
 					</div>
-
 				</li>
+				<!-- EDIT PANEL -->
 				<li class="beer-tile flip-card-side-b">
-					
 					<div class="tile-tools tile-tools-top">
 						<ul class="tile-tool-list">
-							<li class="edit-beer list-item list-icon list-icon-edit">
+							<li class="list-item trigger trigger-back">
 								<p>
-									<a action-button="toggleEditPanel" class="icon icon-mode-edit"></a>
+									<a action-button="toggleEditPanel" class="icon icon-arrow-back"></a>
 								</p>
-							
-								<!-- <h1 style="font-size: 20px; color: red; background-color: green;">I'M SIDE B</h1> -->
-							
 							</li>
 						</ul>
 					</div>
-					<div class="content">
+					<div class="tile-content">
 						<beer-form submit-action="putBeer" model="beer"></beer-form>
 					</div>
 				</li>
+				<!-- INFO PANEL -->
 				<li class="beer-tile flip-card-side-c">
 					<div class="tile-tools tile-tools-top">
 						<ul class="tile-tool-list">
-							<li class="edit-beer list-item list-icon list-icon-info">
+							<li class="list-item trigger trigger-forward">
 								<p>
-									<a action-button="toggleInfoPanel" class="icon icon-info-outline"></a>
+									<a action-button="toggleInfoPanel" class="icon icon-arrow-forward"></a>
 								</p>
-
-								<!-- <h1 style="font-size: 20px; color: red; background-color: green;">I'M SIDE C</h1> -->
-							
 							</li>
 						</ul>
 					</div>
-					<ul class="item-detail-list">
-						<li data-ng-if="beer.name" class="list-item">
-							<p>
-								Beer name: <span class="item-hero">{{beer.name}}</span>
-							</p>
-						</li>
-						<li data-ng-if="beer.type" class="list-item">
-							<p>
-								Beer type: <span class="item-hero">{{beer.type}}</span>
-							</p>
-						</li>
-						<li data-ng-if="beer.quantity" class="list-item">
-							<p>
-								Currently in stock: <span class="item-hero">{{beer.quantity}}</span>
-							</p>
-						</li>
-						<li data-ng-if="beer.abv" class="list-item">
-							<p>
-								ABV: <span class="item-hero">{{beer.abv}}%</span>
-							</p>
-						</li> 
-						<li data-ng-if="beer.origin" class="list-item">
-							<p>
-								Country of origin: <span class="item-hero">{{beer.origin}}</span>
-							</p>
-						</li>
-						<li data-ng-if="beer.details" class="list-item">
-							<p>
-								Beer details: <span class="item-hero">{{beer.details}}</span>
-							</p>
-						</li>
-					</ul>
-				</li>
-			</ul>
-			<!-- NOTE Annoyingly had to add this as the widths were being calculated weirdly due to the float & position on the container -->
-			<!-- <ul class="beer-item-inner">
-				<li class="tile-wrap">
-					<ul class="beer-tile flip-card-side-a">
-						 
-						<li data-ng-if="beer.imgUrl">
-							<div style="background-image: url( {{ beer.imgUrl }} ) " alt="" class="beer-logo" >
-							</div>
-						</li>
-						<li data-ng-if="beer.name" class="list-item">
-							<p>
-								Beer name: <span class="item-hero">{{beer.name}}</span>
-							</p>
-						</li>
-						<li data-ng-if="beer.type" class="list-item">
-							<p>
-								Beer type: <span class="item-hero">{{beer.type}}</span>
-							</p>
-						</li>
-						<li data-ng-if="beer.quantity" class="list-item">
-							<p>
-								Currently in stock: <span class="item-hero">{{beer.quantity}}</span>
-							</p>
-						</li>
-						<li data-ng-if="beer.abv" class="list-item">
-							<p>
-								ABV: <span class="item-hero">{{beer.abv}}%</span>
-							</p>
-						</li> 
-						<li data-ng-if="beer.origin" class="list-item">
-							<p>
-								Country of origin: <span class="item-hero">{{beer.origin}}</span>
-							</p>
-						</li>
-						<li data-ng-if="beer.details" class="list-item">
-							<p>
-								Beer details: <span class="item-hero">{{beer.details}}</span>
-							</p>
-						</li>
-						
-						<li class="tile-tools tile-tools-top">
-							<ul class="tile-tool-list">
-								<li class="edit-beer list-item list-icon list-icon-edit">
-									<p>
-										<a action-button="toggleEditPanel" class="icon icon-mode-edit"></a>
-									</p>
-									<beer-form submit-action="putBeer" model="beer"></beer-form>
-								</li>
-								<li class="delete-beer list-item list-icon list-icon-delete">
-									<p>
-										<a action-button="deleteBeer" class="icon icon-delete"></a>
-									</p>
-								</li>
-							</ul>
-						</li> 
-					</ul>
-					<ul class="beer-tile flip-card-side-b">
-						<li class="tile-tools tile-tools-top">
-							<ul class="tile-tool-list">
-								<li class="edit-beer list-item list-icon list-icon-edit">
-									<p>
-										<a action-button="toggleEditPanel" class="icon icon-mode-edit"></a>
-									</p>
-									<beer-form submit-action="putBeer" model="beer"></beer-form>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<h1 style="font-size: 20px; color: red; background-color: green;">I'M SIDE B</h1>
-						</li>
-					</ul>
-				</li>
-			</ul> -->
-			
-			<!-- <ul class="beer-tile flip-card-side-a">
-				 
-				<li data-ng-if="beer.imgUrl">
-					<div style="background-image: url( {{ beer.imgUrl }} ) " alt="" class="beer-logo" >
+					<div class="tile-content">
+						<ul class="item-detail-list">
+							<li data-ng-if="beer.name" class="list-item">
+								<p>
+									Beer name: <span class="item-hero">{{beer.name}}</span>
+								</p>
+							</li>
+							<li data-ng-if="beer.type" class="list-item">
+								<p>
+									Beer type: <span class="item-hero">{{beer.type}}</span>
+								</p>
+							</li>
+							<li data-ng-if="beer.quantity" class="list-item">
+								<p>
+									Currently in stock: <span class="item-hero">{{beer.quantity}}</span>
+								</p>
+							</li>
+							<li data-ng-if="beer.abv" class="list-item">
+								<p>
+									ABV: <span class="item-hero">{{beer.abv}}%</span>
+								</p>
+							</li> 
+							<li data-ng-if="beer.origin" class="list-item">
+								<p>
+									Country of origin: <span class="item-hero">{{beer.origin}}</span>
+								</p>
+							</li>
+							<li data-ng-if="beer.details" class="list-item">
+								<p>
+									Beer details: <span class="item-hero">{{beer.details}}</span>
+								</p>
+							</li>
+						</ul>
 					</div>
 				</li>
-				<li data-ng-if="beer.name" class="list-item">
-					<p>
-						Beer name: <span class="item-hero">{{beer.name}}</span>
-					</p>
-				</li>
-				<li data-ng-if="beer.type" class="list-item">
-					<p>
-						Beer type: <span class="item-hero">{{beer.type}}</span>
-					</p>
-				</li>
-				<li data-ng-if="beer.quantity" class="list-item">
-					<p>
-						Currently in stock: <span class="item-hero">{{beer.quantity}}</span>
-					</p>
-				</li>
-				<li data-ng-if="beer.abv" class="list-item">
-					<p>
-						ABV: <span class="item-hero">{{beer.abv}}%</span>
-					</p>
-				</li> 
-				<li data-ng-if="beer.origin" class="list-item">
-					<p>
-						Country of origin: <span class="item-hero">{{beer.origin}}</span>
-					</p>
-				</li>
-				<li data-ng-if="beer.details" class="list-item">
-					<p>
-						Beer details: <span class="item-hero">{{beer.details}}</span>
-					</p>
-				</li>
-				
-				<li class="tile-tools tile-tools-top">
-					<ul class="tile-tool-list">
-						<li class="edit-beer list-item list-icon list-icon-edit">
-							<p>
-								<a action-button="toggleEditPanel" class="icon icon-mode-edit"></a>
-							</p>
-							<beer-form submit-action="putBeer" model="beer"></beer-form>
-						</li>
-						<li class="delete-beer list-item list-icon list-icon-delete">
-							<p>
-								<a action-button="deleteBeer" class="icon icon-delete"></a>
-							</p>
-						</li>
-					</ul>
-				</li> 
 			</ul>
-			<ul class="flip-card-side-b">
-				<li class="tile-tools tile-tools-top">
-					<ul class="tile-tool-list">
-						<li class="edit-beer list-item list-icon list-icon-edit">
-							<p>
-								<a action-button="toggleEditPanel" class="icon icon-mode-edit"></a>
-							</p>
-							<beer-form submit-action="putBeer" model="beer"></beer-form>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<h1 style="font-size: 20px; color: red; background-color: green;">I'M SIDE B</h1>
-				</li>
-			</ul> -->
 		</li>
 	</ul>
 </div>

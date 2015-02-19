@@ -17,7 +17,6 @@
 	overflow-x hidden
 	overflow-y scroll
 	
-	
 	.beer-logo
 		display block
 		width 200px
@@ -37,80 +36,78 @@
 	.item-hero
 		color $item-hero
 		
-	.tile-tools
-		clearfix()
-		&.tile-tools-top
-			border-bottom 1px solid white
-		&.tile-tools-bottom
-			border-top 1px solid white
+.tile-tools
+	clearfix()
+	&.tile-tools-top
+		border-bottom 1px solid white
+	&.tile-tools-bottom
+		border-top 1px solid white
 			
-	.tile-tool-list
-		width 100%
-		padding 10px
+.tile-tool-list
+	width 100%
+	padding 10px
+	
+.trigger
+	&.trigger-edit,
+	&.trigger-delete,
+	&.trigger-forward
+		float right
+	&.trigger-info,
+	&.trigger-back
+		float left
 		
-	.trigger
-		
-		&.edit-trigger
-			float right
-		&.info-trigger
-			float left
-		&.delete-trigger
-			float right
-		.icon 
-			font-size 2.6rem
-			&:hover
-				cursor pointer
-				text-decoration none
+	.icon 
+		font-size 2.6rem
+		color $primary-icon
+		&:hover
+			color $hover-icon
+			cursor pointer
+			text-decoration none
+
 
 .flip-card-side-a,
 .flip-card-side-b, 
-.flip-card-side-c {
-	width: 100%;
-	position: absolute;
-	height: 330px;
-	backface-visibility: hidden;
-	transform-origin: 50% 50%;
-	transition: all .5s ease-in-out;
-}
-
-// .flip-card-side-b, 
-// .flip-card-side-c {
-// 	display none
-// }
-
-.flip-card-side-a {
-	transform: rotateY(0deg) translateZ(100px);
-	z-index: 1;
-}
-.flip-card-side-b {
-	transform: rotateY(90deg) translateZ(100px);
-}
-.flip-card-side-c {
-	transform: rotateY(-90deg) translateZ(100px);
-}
-
-.flip-left .flip-card-side-a {
-	transform: rotateY(-90deg) translateZ(100px);
-}
-.flip-left .flip-card-side-b {
-	transform: rotateY(0deg) translateZ(100px);
-	z-index: 1;
-}
-.flip-left .flip-card-side-c {
-	transform: rotateY(-180deg) translateZ(100px);
-}
+.flip-card-side-c 
+	width 100%
+	position absolute
+	height 330px
+	backface-visibility hidden
+	transform-origin 50% 50%
+	transition all .5s ease-in-out
 
 
-.flip-right .flip-card-side-a {
-	transform: rotateY(90deg) translateZ(100px);
-}
-.flip-right .flip-card-side-b {
-	transform: rotateY(180deg) translateZ(100px);
-	z-index: 1;
-}
-.flip-right .flip-card-side-c {
-	transform: rotateY(0deg) translateZ(100px);
-}
+.flip-card-side-a 
+	transform rotateY(0deg) translateZ( $cubeTransX )
+	z-index 1
+
+.flip-card-side-b 
+	transform rotateY(90deg) translateZ( $cubeTransX )
+
+.flip-card-side-c 
+	transform rotateY(-90deg) translateZ( $cubeTransX )
+
+// FLIP LEFT STATES
+.flip-left .flip-card-side-a 
+	transform rotateY(-90deg) translateZ( $cubeTransX )
+
+.flip-left .flip-card-side-b 
+	transform rotateY(0deg) translateZ( $cubeTransX ) 
+	z-index 1
+
+.flip-left .flip-card-side-c 
+	transform rotateY(-180deg) translateZ( $cubeTransX )
+
+// FLIP RIGHT STATES
+.flip-right .flip-card-side-a 
+	transform rotateY(90deg) translateZ( $cubeTransX )
+
+.flip-right .flip-card-side-b 
+	transform rotateY(180deg) translateZ( $cubeTransX )
+	z-index 1
+
+.flip-right .flip-card-side-c 
+	transform rotateY(0deg) translateZ( $cubeTransX )
+
 
 
 

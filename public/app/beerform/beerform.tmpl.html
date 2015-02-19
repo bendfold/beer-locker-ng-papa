@@ -1,48 +1,46 @@
-<div class="container-fluid">
-	<form action="#" id="{{'edit_form_' + beer._id}}" enctype='multipart/form-data'>
-		<ul class="edit-panel">
-			<!-- NOTE Model in this view is the one we pass in to the directive attribute i.e. beer -->
-			<li>
-				<label for="editName">Name:</label>
-				<input type="text" placeholder="Edit the beer name here" ng-model="model.name" />
-			</li>
-			<li>
-				<!-- 
-					Adding model here to pass through the beer model, its on the beerform parent as beer, but as its the second time we inherit it here we need to use the original attribute name.
-					TODO - Look at the naming of this model attr as its passed down
-				-->
-				<image-upload model="model">
-			</li>
-			<li>
-				<label for="editType">Type:</label>
-				<input type="text" placeholder="Edit the beer type here" ng-model="model.type" />
-			</li>
-			<li>
-				<label for="editQuantity">Quantity:</label>
-				<input  type="number" placeholder="Edit the beer quantity here" ng-model="model.quantity" />
-			</li>
-			<li>
-				<label for="editABV">ABV:</label>
-				<input type="number" placeholder="Edit the beer ABV here" ng-model="model.abv" />
-			</li>
-			<li>
-				<label for="editOrigin">Origin:</label>
-				<input type="text" placeholder="Edit the beer origin here" ng-model="model.origin" />
-			</li>
-			<li>
-				<label for="editDetails">Details:</label>
-				<textarea placeholder="Edit the beer details here" ng-model="model.details" ></textarea>
-			</li>
-			<li>
-				<a action-button="{{vm.submitAction}}" class="btn btn-primary">SUBMIT</a>
-			</li> 
-		 	
-			<li ng-repeat="field in vm.fields">
-				<label for="edit-{{field.key}}">
-					{{field.label}}
-				</label>
-				<input type="text" ng-model="" />
-			</li>
-		</ul>
-	</form>
-</div>
+<form action="#" id="{{'edit_form_' + beer._id}}" enctype='multipart/form-data'>
+	<ul class="edit-panel">
+		<!-- NOTE Model in this view is the one we pass in to the directive attribute i.e. beer -->
+		<li>
+			<label for="editName">Name:</label>
+			<input type="text" placeholder="Edit the beer name here" ng-model="model.name" />
+		</li>
+		<li>
+			<!-- 
+				Adding model here to pass through the beer model, its on the beerform parent as beer, but as its the second time we inherit it here we need to use the original attribute name.
+				TODO - Look at the naming of this model attr as its passed down
+			-->
+			<image-upload model="model">
+		</li>
+		<li>
+			<label for="editType">Type:</label>
+			<input type="text" placeholder="Edit the beer type here" ng-model="model.type" />
+		</li>
+		<li>
+			<label for="editQuantity">Quantity:</label>
+			<input  type="number" placeholder="Edit the beer quantity here" ng-model="model.quantity" />
+		</li>
+		<li>
+			<label for="editABV">ABV:</label>
+			<input type="number" placeholder="Edit the beer ABV here" ng-model="model.abv" />
+		</li>
+		<li>
+			<label for="editOrigin">Origin:</label>
+			<input type="text" placeholder="Edit the beer origin here" ng-model="model.origin" />
+		</li>
+		<li>
+			<label for="editDetails">Details:</label>
+			<textarea placeholder="Edit the beer details here" ng-model="model.details" ></textarea>
+		</li>
+		<li>
+			<a action-button="{{vm.submitAction}}" class="btn btn-primary">SUBMIT</a>
+		</li> 
+	 	
+		<li ng-repeat="field in vm.fields">
+			<label for="edit-{{field.key}}">
+				{{field.label}}
+			</label>
+			<input type="text" ng-model="" />
+		</li>
+	</ul>
+</form>
