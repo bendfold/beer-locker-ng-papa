@@ -13,6 +13,7 @@ ANGULAR TASKS
 CSS TASKS
 ----------------------------
 * Make :before / :after line a mixin
+* Tidy up the beer grid
 * Style beer form
 * Tidy new beer page
 	- Unify form style with edit panel
