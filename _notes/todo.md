@@ -14,7 +14,7 @@ CSS TASKS
 ----------------------------
 * Make :before / :after line a mixin
 * Tidy up the beer grid
-* Style beer form
+* Style beer form / Add in preview so you can see the real time update
 * Tidy new beer page
 	- Unify form style with edit panel
 	- Slick way to trasnition to the new beer panel? 
