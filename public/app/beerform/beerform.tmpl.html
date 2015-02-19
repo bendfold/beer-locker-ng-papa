@@ -2,7 +2,7 @@
 	<ul class="edit-panel">
 		<!-- NOTE Model in this view is the one we pass in to the directive attribute i.e. beer -->
 		<li>
-			<label for="editName">Name:</label>
+			<label class="label" for="editName">Name:</label>
 			<input type="text" placeholder="Edit the beer name here" ng-model="model.name" />
 		</li>
 		<li>
@@ -13,23 +13,23 @@
 			<image-upload model="model">
 		</li>
 		<li>
-			<label for="editType">Type:</label>
+			<label class="label" for="editType">Type:</label>
 			<input type="text" placeholder="Edit the beer type here" ng-model="model.type" />
 		</li>
 		<li>
-			<label for="editQuantity">Quantity:</label>
+			<label class="label" for="editQuantity">Quantity:</label>
 			<input  type="number" placeholder="Edit the beer quantity here" ng-model="model.quantity" />
 		</li>
 		<li>
-			<label for="editABV">ABV:</label>
+			<label class="label" for="editABV">ABV:</label>
 			<input type="number" placeholder="Edit the beer ABV here" ng-model="model.abv" />
 		</li>
 		<li>
-			<label for="editOrigin">Origin:</label>
+			<label class="label" for="editOrigin">Origin:</label>
 			<input type="text" placeholder="Edit the beer origin here" ng-model="model.origin" />
 		</li>
 		<li>
-			<label for="editDetails">Details:</label>
+			<label class="label" for="editDetails">Details:</label>
 			<textarea placeholder="Edit the beer details here" ng-model="model.details" ></textarea>
 		</li>
 		<li>
@@ -37,7 +37,7 @@
 		</li> 
 	 	
 		<li ng-repeat="field in vm.fields">
-			<label for="edit-{{field.key}}">
+			<label class="label" for="edit-{{field.key}}">
 				{{field.label}}
 			</label>
 			<input type="text" ng-model="" />
