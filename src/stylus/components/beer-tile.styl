@@ -1,20 +1,16 @@
 .beer-item-parent
 	position relative
-	
 	transform-style: preserve-3d;
-	height 310px
 	perspective: 1000px;
 
 .beer-item-inner
 	display block 
 	width 95%
-	height 300px
+	height 400px
 	position relative
 
 .beer-tile
-	border 1px solid #dadada
-	border-radius 10px
-	padding 10px
+	padding 0
 	margin 0 0 15px 0
 	background-color $tile-bgnd
 	height 260px
@@ -26,7 +22,7 @@
 		display block
 		width 200px
 		height 200px
-		margin 30px auto
+		margin 15px auto
 		padding 0
 		background-repeat no-repeat
 		background-position center center
@@ -42,42 +38,45 @@
 		color $item-hero
 		
 	.tile-tools
-		position absolute
-		top 0
-		left 0
-		width 100%
-		
+		clearfix()
+		&.tile-tools-top
+			border-bottom 1px solid white
+		&.tile-tools-bottom
+			border-top 1px solid white
+			
 	.tile-tool-list
 		width 100%
-		position relative
-
-	.list-icon
-		position absolute
-		top 10px
-		a.icon
+		padding 10px
+		
+	.trigger
+		
+		&.edit-trigger
+			float right
+		&.info-trigger
+			float left
+		&.delete-trigger
+			float right
+		.icon 
 			font-size 2.6rem
-	
-		&.list-icon-edit
-			left 30px
-		&.list-icon-delete
-			right 20px
-		&:hover
-			cursor pointer
-			text-decoration none
-
-
-
+			&:hover
+				cursor pointer
+				text-decoration none
 
 .flip-card-side-a,
 .flip-card-side-b, 
 .flip-card-side-c {
 	width: 100%;
 	position: absolute;
-	height: 300px;
+	height: 330px;
 	backface-visibility: hidden;
 	transform-origin: 50% 50%;
 	transition: all .5s ease-in-out;
 }
+
+// .flip-card-side-b, 
+// .flip-card-side-c {
+// 	display none
+// }
 
 .flip-card-side-a {
 	transform: rotateY(0deg) translateZ(100px);
@@ -88,7 +87,6 @@
 }
 .flip-card-side-c {
 	transform: rotateY(-90deg) translateZ(100px);
-	background-color rgba(0, 0, 255, 0.6)
 }
 
 .flip-left .flip-card-side-a {
