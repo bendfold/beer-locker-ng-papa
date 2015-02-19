@@ -5,7 +5,7 @@
 
 /* line 13 : /Users/owencowdry/development/_playground/papa_locker/node_modules/gulp-stylus/node_modules/stylus/lib/functions/index.styl */
 
-/* line 17 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/index.styl */
+/* line 27 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/index.styl */
 
 /* line 10 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/index.styl */
 
@@ -25,7 +25,7 @@
 
 /* line 90 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/flex.styl */
 
-/* line 17 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/gradients.styl */
+/* line 27 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/gradients.styl */
 
 /* line 11 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/gradients.styl */
 
@@ -53,7 +53,7 @@
 
 /* line 5 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/reset.styl */
 
-/* line 17 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/text/index.styl */
+/* line 27 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/text/index.styl */
 
 /* line 12 : /Users/owencowdry/development/_playground/papa_locker/node_modules/nib/lib/nib/text/index.styl */
 
@@ -113,13 +113,13 @@ html{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-
 input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
 /* line 66 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/reset.styl */
 input[type=number]{-moz-appearance:textfield}
-/* line 17 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/reset.styl */
+/* line 19 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/reset.styl */
 
 /* line 2 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/colours.styl */
 
 /* line 18 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/colours.styl */
 
-/* line 17 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/core-layout.styl */
+/* line 19 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/core-layout.styl */
 
 /* line 1 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/core/core-layout.styl */
 html{font-size:62.5%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
@@ -380,7 +380,7 @@ html{font-size:62.5%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;bo
 /* line 11 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beerlist-tools.styl */
 
 /* line 1 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beerlist-tools.styl */
-.beer-tools{margin:0 0 40px 0;background-color:#eee;border-top:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;padding:0 40px 0 22px;}
+.beer-tools{margin:0 0 40px 0;background-color:#eaeaea;border-top:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;padding:0 40px 0 22px;}
 /* line 7 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beerlist-tools.styl */
 .beer-tools .tool-label{margin-right:15px;font-size:1.4rem}
 /* line 10 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beerlist-tools.styl */
@@ -447,12 +447,26 @@ html{font-size:62.5%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;bo
 .flip-right .flip-card-side-b{-webkit-transform:rotateY(180deg) translateZ(130px);-moz-transform:rotateY(180deg) translateZ(130px);-o-transform:rotateY(180deg) translateZ(130px);-ms-transform:rotateY(180deg) translateZ(130px);transform:rotateY(180deg) translateZ(130px);z-index:1}
 /* line 107 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-tile.styl */
 .flip-right .flip-card-side-c{-webkit-transform:rotateY(0) translateZ(130px);-moz-transform:rotateY(0) translateZ(130px);-o-transform:rotateY(0) translateZ(130px);-ms-transform:rotateY(0) translateZ(130px);transform:rotateY(0) translateZ(130px)}
-/* line 3 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-tile.styl */
+/* line 27 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-tile.styl */
 
-/* line 108 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-form.styl */
+/* line 27 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-details.styl */
 
-/* line 1 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-form.styl */
-.item-detail-list{margin:0;padding:20px}
+/* line 1 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-details.styl */
+.item-detail-list{margin:0;padding:20px;}
+/* line 4 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-details.styl */
+.item-detail-list .list-item{margin:0;padding:0 0 10px 0;border-top:1px solid #dbdbdb;border-bottom:1px solid #fdfdfd;}
+/* line 9 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-details.styl */
+.item-detail-list .list-item:first-child{position:relative;}
+/* line 11 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-details.styl */
+.item-detail-list .list-item:first-child:before{position:absolute;left:0;content:' ';display:block;width:100%;height:1px;top:-2px;border-top:1px solid #fdfdfd}
+/* line 22 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-details.styl */
+.item-detail-list .list-item:last-child{position:relative;}
+/* line 24 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-details.styl */
+.item-detail-list .list-item:last-child:after{position:absolute;left:0;content:' ';display:block;width:100%;height:1px;bottom:-2px;border-top:1px solid #dbdbdb}
+/* line 35 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-details.styl */
+.item-detail-list .item-title{display:block;margin:0;padding:10px 0}
+/* line 40 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-details.styl */
+.item-detail-list .item-hero{display:block}
 /* line 1 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/beer-details.styl */
 
 /* line 1 : /Users/owencowdry/development/_playground/papa_locker/src/stylus/components/header.styl */
