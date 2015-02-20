@@ -7,7 +7,7 @@
 	function NewBeerCtrl ( $scope, beerCollectionService, $location ) {
 		var vm = this;
 		vm.newBeer = {};
-
+		
 		$scope.$on( 'postBeer', function ( evt, args ) {
 			// Add new beer to the DB
 			beerCollectionService.postBeer( vm.newBeer );

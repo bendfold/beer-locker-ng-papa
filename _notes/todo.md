@@ -6,6 +6,8 @@ ANGULAR TASKS
 
 * Error handling
 
+* Remove sort when editing
+
 * Look at the naming of this model attr as its passed down on attribute for second time
 * Add in image cropping module
 * Add in tests

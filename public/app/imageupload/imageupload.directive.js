@@ -29,6 +29,7 @@ function imageUpload() {
 
 			if ( file.type.match( imageType ) ) {
 				var reader = new FileReader();
+				
 				reader.onloadend = function ( e ) {
 					var result = reader.result,
 						rawBase64;
@@ -37,12 +38,13 @@ function imageUpload() {
 					// Push the raw base 64 goodness up to imgur
 					ctrl.postImgToImgur( rawBase64 ).then(function( data ){
 						// Update preview image
-						var previewImg = fileDisplayArea.querySelector( '.image-preview' );
-						previewImg.src = data.data.data.link;
+						// var previewImg = fileDisplayArea.querySelector( '.image-preview' );
+						// previewImg.src = data.data.data.link;
 						// Update imgUrl on the beer model
 						scope.model.imgUrl = data.data.data.link;
 					});
 				}
+				
 				// Parse the file blob as 64 bit encoded data
 				reader.readAsDataURL( file );
 			
