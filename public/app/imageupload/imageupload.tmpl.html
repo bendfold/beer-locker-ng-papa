@@ -1,6 +1,9 @@
-<label for="imageUpload">Select an image file:</label>
-<input type="file" class="file-input" />
-<div data-ng-if="model.imgUrl">
+<div class="img-upload-area">
+	<input type="file" class="item-input input-img-upload ng-file-input" />
+</div>
+
+
+<div data-ng-if="model.imgUrl" class="img-preview">
 	<div style="background-image: url( {{ model.imgUrl }} ) " class="beer-img" >
 	</div>
 </div> 

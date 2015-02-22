@@ -1,23 +1,28 @@
 ANGULAR TASKS
 ----------------------------
-* Add + beer panel
-* Add default image, only once add new beer is clicked, if there is no image specified
+* Fix img preview in new beer page
+* Active state for main nav
+* Remove sort when editing
 * Form validation, quant & abv only to except numbers.
 
 * Error handling
-
-* Remove sort when editing
-
-* Look at the naming of this model attr as its passed down on attribute for second time
-* Add in image cropping module
 * Add in tests
+
+* Add + beer panel
+* Add in image cropping module
+
 
 CSS TASKS
 ----------------------------
-* Make :before / :after line a mixin
-* Tidy up the beer grid
 * Style beer form / Add in preview so you can see the real time update
 * Tidy new beer page
 	- Unify form style with edit panel
-	- Slick way to trasnition to the new beer panel? 
+	- Slick way to trasnition to the new beer panel?
+
+* Tidy up image upload box
+* Tidy up the beer grid / Fix grid to remove flex on mobile
+
+* Make :before / :after list item line a mixin
+
+ 
 

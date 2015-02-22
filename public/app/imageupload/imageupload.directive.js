@@ -18,8 +18,8 @@ function imageUpload() {
 
 	function linkFunc(scope, element, attr, ctrl) {
 		var el = element[0],
-			fileInput = el.querySelector('.file-input'),
-			fileDisplayArea = el.querySelector('.file-display-area');
+			fileInput = el.querySelector('.ng-file-input');
+			// fileDisplayArea = el.querySelector('.file-display-area');
 
 		fileInput.addEventListener( 'change', onInputChange );
 

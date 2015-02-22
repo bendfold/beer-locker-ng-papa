@@ -3,6 +3,9 @@
 		<!-- NOTE Model in this view is the one we pass in to the directive attribute i.e. beer -->
 		<li class="list-item">
 			<label class="item-title" for="editName">// Name</label>
+			<p>
+				<span class="item-hero">{{ model.name }}</span>
+			</p>
 			<input class="item-input" type="text" placeholder="Edit the beer name here" ng-model="model.name" />
 		</li>
 		<li class="list-item">

@@ -9,6 +9,14 @@
 		display block
 		width 100%
 		padding 5px
+		box-shadow none
+		background-color $input-bgnd
+		border-bottom 1px solid $input-border
+		&:focus
+			input-focus()
+	.item-input-textarea
+		min-height 70px
+			
 	.file-display-area
 		display block
 		width 100px
@@ -19,9 +27,13 @@
 		background-position center center
 		background-size contain
 	.list-item
+		.item-hero
+			display none
 		&:last-child
 			border-bottom none
 			padding 10px 0 0 0
 			text-align right
 			&:after
 				border-top none
+	// .input-img-upload
+		// background-color $input-bgnd
