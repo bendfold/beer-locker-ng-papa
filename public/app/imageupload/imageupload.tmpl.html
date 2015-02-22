@@ -1,12 +1,10 @@
 <div class="img-upload-area">
+	<span class="placeholder">Drag &amp; drop an image or click here</span>
 	<input type="file" class="item-input input-img-upload ng-file-input" />
 </div>
 <div class="detail img-preview">
 	<span data-ng-show="!model.imgUrl" class="content placeholder">
 		The beer image will appear here
 	</span>
-
-	<div data-ng-show="model.imgUrl" style="background-image: url( {{ model.imgUrl }} ) " class="beer-img">
-	</div>
-
+	<div data-ng-show="model.imgUrl" style="background-image: url( {{ model.imgUrl }} ) " class="beer-img"></div>
 </div> 

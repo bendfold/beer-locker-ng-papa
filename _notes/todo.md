@@ -16,12 +16,7 @@ ANGULAR TASKS
 
 CSS TASKS
 ----------------------------
-* Style beer form / Add in preview so you can see the real time update
-* Tidy new beer page
-	- Unify form style with edit panel
-	- Slick way to trasnition to the new beer panel?
-
-* Tidy up image upload box
+* Tidy up image upload box on cube
 * Tidy up the beer grid / Fix grid to remove flex on mobile
 
 * Make :before / :after list item line a mixin - beer-details.styl
