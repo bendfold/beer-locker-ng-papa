@@ -3,10 +3,16 @@
 		<!-- NOTE Model in this view is the one we pass in to the directive attribute i.e. beer -->
 		<li class="list-item">
 			<label class="item-title" for="editName">// Name</label>
-			<p>
-				<span class="item-hero">{{ model.name }}</span>
-			</p>
-			<input class="item-input" type="text" placeholder="Edit the beer name here" ng-model="model.name" />
+			<div class="input-wrap">
+				<input class="item-input" type="text" placeholder="Edit the beer name here" ng-model="model.name" />
+				<p class="detail">
+					<span data-ng-show="!model.name" class="content placeholder">The beer name will appear here</span>
+					<span data-ng-show="model.name" class="content item-hero">
+						{{ model.name }}
+					</span>
+				</p>
+			</div>
+			
 		</li>
 		<li class="list-item">
 			<p>
@@ -16,27 +22,65 @@
 				Adding model here to pass through the beer model, its on the beerform parent as beer, but as its the second time we inherit it here we need to use the original attribute name.
 				TODO - Look at the naming of this model attr as its passed down
 			-->
-			<image-upload model="model">
+			<div class="input-wrap">
+				<image-upload model="model">
+			<div class="input-wrap">
 		</li>
 		<li class="list-item">
 			<label class="item-title" for="editType">// Type</label>
-			<input class="item-input" type="text" placeholder="Edit the beer type here" ng-model="model.type" />
+			<div class="input-wrap">
+				<input class="item-input" type="text" placeholder="Edit the beer type here" ng-model="model.type" />
+				<p class="detail">
+					<span data-ng-show="!model.type" class="content placeholder">The beer type will appear here</span>
+					<span data-ng-show="model.type" class="content item-hero">
+						{{ model.type }}
+					</span>
+				</p>
+			</div>
 		</li>
 		<li class="list-item">
 			<label class="item-title" for="editQuantity">// Quantity</label>
-			<input class="item-input" type="number" placeholder="Edit the beer quantity here" ng-model="model.quantity" />
+			<div class="input-wrap">
+				<input class="item-input" type="number" placeholder="Edit the beer quantity here" ng-model="model.quantity" />
+				<p class="detail">
+					<span data-ng-show="!model.quantity" class="content placeholder">The beer quantity will appear here</span>
+					<span data-ng-show="model.quantity" class="content item-hero">
+						{{ model.quantity }}
+					</span>
+				</p>
+			</div>
 		</li>
 		<li class="list-item">
 			<label class="item-title" for="editABV">// ABV</label>
-			<input class="item-input" type="number" placeholder="Edit the beer ABV here" ng-model="model.abv" />
+			<div class="input-wrap">
+				<input class="item-input" type="number" placeholder="Edit the beer ABV here" ng-model="model.abv" />
+				<p class="detail">
+					<span data-ng-show="!model.abv" class="content placeholder">The beer ABV will appear here</span>
+					<span data-ng-show="model.abv" class="content item-hero">
+						{{ model.abv }} <span class="unit" data-ng-if="model.abv">%</span>
+					</span>
+				</p>
+			</div>
 		</li>
 		<li class="list-item">
 			<label class="item-title" for="editOrigin">// Origin</label>
-			<input class="item-input" type="text" placeholder="Edit the beer origin here" ng-model="model.origin" />
+			<div class="input-wrap">
+				<input class="item-input" type="text" placeholder="Edit the beer origin here" ng-model="model.origin" />
+				<p class="detail">
+					<span data-ng-show="!model.origin" class="content placeholder">The beer origin will appear here</span>
+					<span data-ng-show="model.origin" class="content item-hero">{{ model.origin }}</span>
+				</p>
+			</div>
 		</li>
 		<li class="list-item">
 			<label class="item-title" for="editDetails">// Details</label>
-			<textarea class="item-input item-input-textarea" placeholder="Edit the beer details here" ng-model="model.details" ></textarea>
+			<div class="input-wrap">
+				<textarea class="item-input item-input-textarea" placeholder="Edit the beer details here" ng-model="model.details" ></textarea>
+				<p class="detail">
+					<span data-ng-show="!model.details" class="content placeholder">The beer details will appear here</span>
+					<span data-ng-show="model.details" class="content item-hero">{{ model.details }}</span>
+				</p>
+			</div>
 		</li>
 		<li class="list-item list-item-submit">
 			<a action-button="{{vm.submitAction}}" class="btn btn-primary">SUBMIT</a>

@@ -1,9 +1,12 @@
 <div class="img-upload-area">
 	<input type="file" class="item-input input-img-upload ng-file-input" />
 </div>
+<div class="detail img-preview">
+	<span data-ng-show="!model.imgUrl" class="content placeholder">
+		The beer image will appear here
+	</span>
 
-
-<div data-ng-if="model.imgUrl" class="img-preview">
-	<div style="background-image: url( {{ model.imgUrl }} ) " class="beer-img" >
+	<div data-ng-show="model.imgUrl" style="background-image: url( {{ model.imgUrl }} ) " class="beer-img">
 	</div>
+
 </div> 
