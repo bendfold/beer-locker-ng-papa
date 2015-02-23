@@ -17,8 +17,5 @@ ANGULAR TASKS
 
 CSS TASKS
 ----------------------------
-
-* Make :before / :after list item line a mixin - beer-details.styl
-
  
 
