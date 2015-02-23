@@ -1,6 +1,7 @@
 ANGULAR TASKS
 ----------------------------
-* Fix img preview in new beer page
+* Fix img preview in beer detail panel
+* Add img loading spinner?
 * Active state for main nav
 * Remove sort when editing
 * When you delete a beer it should remove it from the imgur account too
@@ -16,8 +17,6 @@ ANGULAR TASKS
 
 CSS TASKS
 ----------------------------
-* Tidy up image upload box on cube
-* Tidy up the beer grid / Fix grid to remove flex on mobile
 
 * Make :before / :after list item line a mixin - beer-details.styl
 
