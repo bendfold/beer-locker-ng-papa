@@ -11,15 +11,23 @@ beer-img( $width, $height, $margin-top, $margin-btm )
 	background-repeat no-repeat
 	background-position center center
 	background-size contain
+	
 placeholder( color )
 	&::-webkit-input-placeholder 
 		color color
-
 	&:-moz-placeholder /* Firefox 18- */
 		color color
-
 	&::-moz-placeholder /* Firefox 19+ */
 		color color
-
 	&:-ms-input-placeholder
 		color color
+		
+detail-divder( border-color )
+	position absolute
+	left 0
+	content ' '
+	display block
+	width 100%
+	height 1px
+	// difs
+	border-top 1px solid border-color
