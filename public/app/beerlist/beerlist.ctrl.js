@@ -5,11 +5,13 @@
 		.controller( 'BeerlistCtrl', BeerlistCtrl );
 
 	/* @ngInject */
-	function BeerlistCtrl ( $scope, beerCollectionService, $rootScope ) {
+	function BeerlistCtrl ( $scope, beerCollectionService, $rootScope, $state ) {
 		var vm = this;
 		vm.beers = [];
 
 		activate();
+
+		$scope.$state = $state;
 
 		////////////
 

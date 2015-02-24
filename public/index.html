@@ -17,19 +17,30 @@
 			<nav class="collapse navbar-collapse main-nav">
 				<div class="container-fluid">
 					<div class="navbar-header">
-						<h1 class="navbar-brand">Beer Locker :: ng-papa</h1>
+						<h1 class="navbar-brand">
+							<a ui-sref="beerlist">
+								Beer Locker :: ng-papa
+							</a>
+						</h1>
 					</div>
 					<ul class="nav navbar-nav navbar-right">
-						<li>
+						<li ui-sref-active="active">
 							<a ui-sref="beerlist">
 								Beer list
 							</a>
 						</li>
-						<li>
+						<li ui-sref-active="active">
 							<a ui-sref="newbeer">
 								Add a new beer
 							</a>
 						</li>
+						<!-- 
+						<li ui-sref-active="active">
+							<a ui-sref="about">
+								About
+							</a>
+						</li> 
+						-->
 					</ul>
 				</div>
 			</nav>

@@ -1,6 +1,5 @@
 ANGULAR TASKS
 ----------------------------
-* Active state for main nav
 * Home click to main logo
 * Remove sort when editing
 
@@ -23,5 +22,5 @@ ANGULAR TASKS
 
 CSS TASKS
 ----------------------------
- 
+
 

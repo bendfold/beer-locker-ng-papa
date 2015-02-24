@@ -35,6 +35,12 @@
 			controller: 'NewBeerCtrl',
 			controllerAs: 'vm'
 		});
+		// .state('about', {
+		// 	url: "/about",
+		// 	templateUrl: "./app/about/about.tmpl.html",
+		// 	controller: 'AboutCtrl',
+		// 	controllerAs: 'vm'
+		// });
 	});
 
 })();
