@@ -1,6 +1,5 @@
 ANGULAR TASKS
 ----------------------------
-* Home click to main logo
 * Remove sort when editing
 
 -- ADD TO GITHUB
