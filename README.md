@@ -1,4 +1,4 @@
-# Angular beer locker
+# beer-locker-ng-papa 
 I just want to use the REST API I set up from the beer locker and try to put an Angular driven front end on top of it.
 
 As a means of trying to keep the Angular side of things tidy I have tried to adhere to [John Papas style guide], using his [modular project] as a basis for the structure. 
