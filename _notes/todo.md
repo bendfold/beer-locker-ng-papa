@@ -1,7 +1,6 @@
 ANGULAR TASKS
 ----------------------------
 
-
 --> ADD TO GITHUB
 
 --> PUSH TO HEROKU & ADD LINK TO GITHUB
