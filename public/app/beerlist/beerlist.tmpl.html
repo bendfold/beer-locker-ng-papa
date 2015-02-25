@@ -27,7 +27,8 @@
 
 <div class="beer-list">
 	<ul class="product-list mi-row">
-		<li data-ng-repeat="beer in vm.beers | filter : query | orderBy : orderProp" id="{{'beer_' + beer._id}}" class="mi-col mi-col-quad beer-item-parent">
+		<!-- <li data-ng-repeat="beer in vm.beers | filter : query | orderBy : orderProp" id="{{'beer_' + beer._id}}" class="mi-col mi-col-quad beer-item-parent"> -->
+		<li data-ng-repeat="beer in vm.beers | filter : query " id="{{'beer_' + beer._id}}" class="mi-col mi-col-quad beer-item-parent">
 			<ul class="beer-item-inner">
 				<!-- MAIN PANEL -->
 				<li class="beer-tile flip-card-side-a">
