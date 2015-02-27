@@ -19,7 +19,8 @@ var env = process.env.NODE_ENV || 'development';
 if ('development' == env) {
 	app.use(express.static(__dirname + '/public')); 	// set the static files location /public/img will be /img for users
 	app.use(morgan('dev')); 							// log every request to the console
-	app.use( bodyParser() ); 							// Use the body-parser package in order to accept data via POST or PUT we need body parser
+	// app.use( bodyParser() ); 
+	app.use(bodyParser.json()); 							// Use the body-parser package in order to accept data via POST or PUT we need body parser
 }
 
 // ROUTES ===========================================================================
