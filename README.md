@@ -6,8 +6,23 @@ After completing the REST API, I decided to put an Angular driven front end on t
 As a means of trying to keep the Angular side of things tidy I have tried to adhere to [John Papas style guide], using his [modular project] as a basis for the structure. 
 
 
+## Instructions
+(Caveat - The current stage of the master branch is WIP so its not fully working, but if you want to clone and run it to see whats there feel free.)
 
+##### The following instructions assume you have [node.js], [mongoDB] & [nodemon] installed on your machine.
+
+##### After cloning the repo, open the terminal and: 
+
+1. Start up mongo by typing - ``mongod``
+2. Navigate into the beer locker root - ``cd wherever-you-cloned-it-to/beer-locker-ng-papa``
+3. Run the server - ``nodemon server.js``
+4. Run Gulp to complie the CSS - ``gulp``
+5. Hit localhost - ``http://localhost:3333/`` 
+6. Add some beers
 
 [John Papas style guide]:https://github.com/johnpapa/angularjs-styleguide
 [modular project]:https://github.com/johnpapa/ng-demos/tree/master/modular
 [rest-tutorial]:http://scottksmith.com/blog/2014/05/02/building-restful-apis-with-node/
+[node.js]:http://nodejs.org/
+[mongoDB]:https://www.mongodb.org/
+[nodemon]:http://nodemon.io/
