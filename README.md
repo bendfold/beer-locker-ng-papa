@@ -7,7 +7,7 @@ As a means of trying to keep the Angular side of things tidy I have tried to adh
 
 
 ## Instructions
-(Caveat - The current stage of the master branch is WIP so its not fully working, but if you want to clone and run it to see whats there feel free.)
+(*Caveat - The current stage of the master branch is WIP so its not fully working, but if you want to clone and run it to see whats there feel free.*)
 
 ##### The following instructions assume you have [node.js], [mongoDB] & [nodemon] installed on your machine.
 
