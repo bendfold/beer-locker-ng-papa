@@ -4,16 +4,30 @@ var express = require('express');						// Pull in the Express framework
 var app = express();									// Create our Express application
 var mongoose = require('mongoose');						// mongoose for mongodb
 var morgan = require('morgan');							// Pull in logger middleware - https://github.com/expressjs/morgan
-var port 	 = process.env.PORT || 3333;
+var port 	 = process.env.PORT || 5000;
 var bodyParser = require('body-parser');
+
+var uriUtil = require('mongodb-uri');
+/* 
+ * Mongoose by default sets the auto_reconnect option to true.
+ * We recommend setting socket options at both the server and replica set level.
+ * We recommend a 30 second connection timeout because it allows for 
+ * plenty of time in most operating environments.
+ */
+var options = { server: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } }, 
+                replset: { socketOptions: { keepAlive: 1, connectTimeoutMS : 30000 } } };  
 
 // var beerController = require('./app/controllers/beer');
 // var userController = require('./app/controllers/user');
 
-var database = require('./db_config/database');			// load the DB config
+// var database = require('./db_config/database');			// load the DB config
+var mongodbUri = 'mongodb://heroku_app34737082:8000efbsnmtvc2o4htrser0tal@dbh15.mongolab.com:27157/heroku_app34737082';
+var mongooseUri = uriUtil.formatMongoose( mongodbUri );
 
 // CONFIGURATION ====================================================================
-mongoose.connect( database.url );	// connect to mongoDB
+// mongoose.connect( database.url );	// connect to mongoDB
+
+mongoose.connect( mongooseUri, options );
 
 var env = process.env.NODE_ENV || 'development';
 if ('development' == env) {
