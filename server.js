@@ -4,7 +4,7 @@ var express = require('express');						// Pull in the Express framework
 var app = express();									// Create our Express application
 var mongoose = require('mongoose');						// mongoose for mongodb
 var morgan = require('morgan');							// Pull in logger middleware - https://github.com/expressjs/morgan
-var port 	 = process.env.PORT || 5000;
+var port 	 = process.env.PORT || 3333;
 var bodyParser = require('body-parser');
 
 var uriUtil = require('mongodb-uri');
@@ -17,14 +17,14 @@ var uriUtil = require('mongodb-uri');
  */
 var options = { server: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } }, 
                 replset: { socketOptions: { keepAlive: 1, connectTimeoutMS : 30000 } } };  
-
+// Our heroku app mongo lab DB connection
 var mongodbUri = 'mongodb://heroku_app34737082:8000efbsnmtvc2o4htrser0tal@dbh15.mongolab.com:27157/heroku_app34737082';
+// Make sure the DB URL plays nice with mongoose
 var mongooseUri = uriUtil.formatMongoose( mongodbUri );
 
-
 // CONFIGURATION ====================================================================
-// mongoose.connect( database.url );	// connect to mongoDB
 
+// Connect to the DB
 mongoose.connect( mongooseUri, options );
 
 var env = process.env.NODE_ENV || 'development';
