@@ -20,12 +20,6 @@ function beerForm() {
 
 	function linkFunc(scope, el, attr, ctrl) {
 		scope.vm.submitAction = attr.submitAction;
-
-		// console.log( 'beer form list scope ', scope );
-		// console.log( 'beer form list el ', el );
-		// console.log( 'beer form list attr ', attr );
-		// console.log( 'beer form list ctrl ', ctrl );
-	
 	};
 }
 
