@@ -18,7 +18,6 @@ var uriUtil = require('mongodb-uri');
 var options = { server: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } }, 
                 replset: { socketOptions: { keepAlive: 1, connectTimeoutMS : 30000 } } };  
 // Our heroku app mongo lab DB connection
-// var mongodbUri = 'mongodb://heroku_app34737082:8000efbsnmtvc2o4htrser0tal@dbh15.mongolab.com:27157/heroku_app34737082';
 var mongoUri = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/papa-locker';
 // Make sure the DB URL plays nice with mongoose
 var mongooseUri = uriUtil.formatMongoose( mongoUri );
