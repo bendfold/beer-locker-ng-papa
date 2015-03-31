@@ -2,13 +2,13 @@
 	<ul class="edit-panel item-detail-list">
 		<!-- NOTE Model in this view is the one we pass in to the directive attribute i.e. beer -->
 		<li class="list-item">
-			<label class="item-title" for="editName">// Name</label>
+			<label class="item-title" for="editName">// Name - {{ localBeer.name }}</label>
 			<div class="input-wrap">
-				<input class="item-input" type="text" placeholder="Edit the beer name here" ng-model="model.name" />
+				<input class="item-input" type="text" placeholder="Edit the beer name here" ng-model="localBeer.name" />
 				<p class="detail">
-					<span data-ng-show="!model.name" class="content placeholder">The beer name will appear here</span>
-					<span data-ng-show="model.name" class="content item-hero">
-						{{ model.name }}
+					<span data-ng-show="!localBeer.name" class="content placeholder">The beer name will appear here</span>
+					<span data-ng-show="localBeer.name" class="content item-hero">
+						{{ localBeer.name }}
 					</span>
 				</p>
 			</div>

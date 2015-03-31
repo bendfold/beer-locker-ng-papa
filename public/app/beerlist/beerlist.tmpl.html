@@ -1,18 +1,17 @@
 <nav class="collapse navbar-collapse beer-tools">
 	<div class="row">
-		<div class="navbar-form navbar-right">
+		<div class="navbar-form navbar-left">
 			<div class="form-group" role="search">
 				<label for="searchFilter" class="tool-label">
 					Search:
 				</label>
 				<input type="text" name="searchFilter" ng-model="query" class="form-control search-input" />
 			</div>
-		</div>
-		<!-- 
+		</div> 
 		<div class="navbar-form navbar-right">
 			<div class="form-group" role="filter">
 				<label for="sortByFilter" class="tool-label">
-					Sort:  TEST
+					Sort:
 				</label>
 				<select name="sortByFilter" ng-model="orderProp" class="form-control sort-select">
 					<option value="name">Name</option>
@@ -21,14 +20,13 @@
 				</select>
 			</div>
 		</div> 
-		-->
+		
 	</div>
 </nav>
 
 <div class="beer-list">
 	<ul class="product-list mi-row">
-		<!-- <li data-ng-repeat="beer in vm.beers | filter : query | orderBy : orderProp" id="{{'beer_' + beer._id}}" class="mi-col mi-col-quad beer-item-parent"> -->
-		<li data-ng-repeat="beer in vm.beers | filter : query " id="{{'beer_' + beer._id}}" class="mi-col mi-col-quad beer-item-parent">
+		<li data-ng-repeat="beer in vm.beers | filter : query | orderBy : orderProp" id="{{'beer_' + beer._id}}" class="mi-col mi-col-quad beer-item-parent">
 			<ul class="beer-item-inner">
 				<!-- MAIN PANEL -->
 				<li class="beer-tile flip-card-side-a">

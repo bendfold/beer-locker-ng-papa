@@ -36,26 +36,6 @@
 			var beerListItem = document.getElementById( 'beer_' + args[0] );
 			beerListItem.classList.toggle( 'flip-left' );
 
-			
-
-			// $scope.orderProp = null ? lastOrderProp : null;
-			// if ( typeof $scope.orderProp  === 'string' ) {
-				
-			// 	console.log( 'switch it to null' );
-			// 	$scope.orderProp = undefined;
-			// 	vm.lastOrderProp = $scope.orderProp;
-				
-			
-			// } else {
-
-			// 	$scope.orderProp = vm.lastOrderProp;
-
-			// }
-			
-			console.log( '$scope.orderProp ', $scope.orderProp , typeof $scope.orderProp );
-			console.log( 'vm.lastOrderProp ', vm.lastOrderProp, typeof vm.lastOrderProp );
-			console.log('toggleEditPanel ',  beerListItem );
-
 		});
 
 		$scope.$on( 'toggleInfoPanel', function ( evt, args ) {
@@ -66,6 +46,10 @@
 		});
 
 		$scope.$on( 'putBeer', function ( evt, args ) {
+			
+			console.log( "putBeer evt ", evt );
+			console.log( "putBeer args ", args );
+
 			// Add the changes to the DB
 			beerCollectionService.putBeer( args );
 			// Close the panel up
