@@ -2,7 +2,7 @@
 	<ul class="edit-panel item-detail-list">
 		<!-- NOTE Model in this view is the one we pass in to the directive attribute i.e. beer -->
 		<li class="list-item">
-			<label class="item-title" for="editName">// Name - {{ localBeer.name }}</label>
+			<label class="item-title" for="editName">// Name</label>
 			<div class="input-wrap">
 				<input class="item-input" type="text" placeholder="Edit the beer name here" ng-model="localBeer.name" />
 				<p class="detail">
@@ -83,7 +83,7 @@
 			</div>
 		</li>
 		<li class="list-item list-item-submit">
-			<a action-button="{{vm.submitAction}}" class="btn btn-primary">SUBMIT</a>
+			<a action-button="{{vm.submitAction}}" class="btn btn-primary btn-submit">SUBMIT</a>
 		</li>
 	</ul>
 </form>
