@@ -27,9 +27,6 @@ function beerForm() {
 			var localBeer = scope.localBeer;
 			for (var key in scope.localBeer) {
 				if ( scope.localBeer.hasOwnProperty(key) ) {
-					console.log( 'localbeer key' , key  );
-					console.log( 'localbeer key' , scope.localBeer[key]  );
-
 					var localKey = key,
 						localVal = scope.localBeer[key];
 					
