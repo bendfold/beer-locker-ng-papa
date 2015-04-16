@@ -29,11 +29,11 @@
 		<li class="list-item">
 			<label class="item-title" for="editType">// Type</label>
 			<div class="input-wrap">
-				<input class="item-input" type="text" placeholder="Edit the beer type here" ng-model="model.type" />
+				<input class="item-input" type="text" placeholder="Edit the beer type here" ng-model="localBeer.type" />
 				<p class="detail">
-					<span data-ng-show="!model.type" class="content placeholder">The beer type will appear here</span>
-					<span data-ng-show="model.type" class="content item-hero">
-						{{ model.type }}
+					<span data-ng-show="!localBeer.type" class="content placeholder">The beer type will appear here</span>
+					<span data-ng-show="localBeer.type" class="content item-hero">
+						{{ localBeer.type }}
 					</span>
 				</p>
 			</div>
@@ -41,11 +41,11 @@
 		<li class="list-item">
 			<label class="item-title" for="editQuantity">// Quantity</label>
 			<div class="input-wrap">
-				<input class="item-input" type="number" placeholder="Edit the beer quantity here" ng-model="model.quantity" />
+				<input class="item-input" type="number" placeholder="Edit the beer quantity here" ng-model="localBeer.quantity" />
 				<p class="detail">
-					<span data-ng-show="!model.quantity" class="content placeholder">The beer quantity will appear here</span>
-					<span data-ng-show="model.quantity" class="content item-hero">
-						{{ model.quantity }}
+					<span data-ng-show="!localBeer.quantity" class="content placeholder">The beer quantity will appear here</span>
+					<span data-ng-show="localBeer.quantity" class="content item-hero">
+						{{ localBeer.quantity }}
 					</span>
 				</p>
 			</div>
@@ -53,11 +53,11 @@
 		<li class="list-item">
 			<label class="item-title" for="editABV">// ABV</label>
 			<div class="input-wrap">
-				<input class="item-input" type="number" placeholder="Edit the beer ABV here" ng-model="model.abv" />
+				<input class="item-input" type="number" placeholder="Edit the beer ABV here" ng-model="localBeer.abv" />
 				<p class="detail">
-					<span data-ng-show="!model.abv" class="content placeholder">The beer ABV will appear here</span>
-					<span data-ng-show="model.abv" class="content item-hero">
-						{{ model.abv }} <span class="unit" data-ng-if="model.abv">%</span>
+					<span data-ng-show="!localBeer.abv" class="content placeholder">The beer ABV will appear here</span>
+					<span data-ng-show="localBeer.abv" class="content item-hero">
+						{{ localBeer.abv }} <span class="unit" data-ng-if="localBeer.abv">%</span>
 					</span>
 				</p>
 			</div>
@@ -65,20 +65,20 @@
 		<li class="list-item">
 			<label class="item-title" for="editOrigin">// Origin</label>
 			<div class="input-wrap">
-				<input class="item-input" type="text" placeholder="Edit the beer origin here" ng-model="model.origin" />
+				<input class="item-input" type="text" placeholder="Edit the beer origin here" ng-model="localBeer.origin" />
 				<p class="detail">
-					<span data-ng-show="!model.origin" class="content placeholder">The beer origin will appear here</span>
-					<span data-ng-show="model.origin" class="content item-hero">{{ model.origin }}</span>
+					<span data-ng-show="!localBeer.origin" class="content placeholder">The beer origin will appear here</span>
+					<span data-ng-show="localBeer.origin" class="content item-hero">{{ localBeer.origin }}</span>
 				</p>
 			</div>
 		</li>
 		<li class="list-item list-item-details">
 			<label class="item-title" for="editDetails">// Details</label>
 			<div class="input-wrap">
-				<textarea class="item-input item-input-textarea" placeholder="Edit the beer details here" ng-model="model.details" ></textarea>
+				<textarea class="item-input item-input-textarea" placeholder="Edit the beer details here" ng-model="localBeer.details" ></textarea>
 				<p class="detail">
-					<span data-ng-show="!model.details" class="content placeholder">The beer details will appear here</span>
-					<span data-ng-show="model.details" class="content item-hero">{{ model.details }}</span>
+					<span data-ng-show="!localBeer.details" class="content placeholder">The beer details will appear here</span>
+					<span data-ng-show="localBeer.details" class="content item-hero">{{ localBeer.details }}</span>
 				</p>
 			</div>
 		</li>
