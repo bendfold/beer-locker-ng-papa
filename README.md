@@ -5,11 +5,6 @@ After completing the REST API, I decided to put an Angular driven front end on t
 
 As a means of trying to keep the Angular side of things tidy I have tried to adhere to [John Papas style guide], using his [modular project] as a basis for the structure. 
 
-You can see a hosted version of the [beer locker here][heroku-app], it is hosted on a single dyno on heroku so you may need to give it slight nudge to wake it up. 
-
-#### Caveat
-This project is experimental work and is therefore not fully browser tested. Please view [app][heroku-app] in the current version of Firefox, preferably on OSX.
-
 -##### The following instructions assume you have [node.js], [mongoDB] & [nodemon] installed on your machine.
 
 ##### After cloning the repo, open the terminal and: 
@@ -28,4 +23,3 @@ This project is experimental work and is therefore not fully browser tested. Ple
 [node.js]:http://nodejs.org/
 [mongoDB]:https://www.mongodb.org/
 [nodemon]:http://nodemon.io/
-[heroku-app]: https://beer-locker-ng-papa.herokuapp.com/#/beerlist
